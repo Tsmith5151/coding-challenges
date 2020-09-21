@@ -1,3 +1,13 @@
 # Leetcode Examples
 
-This repo contains my solutions to some LeetCode challenges written in Python. The repo will be periodically updated with more examples over time.
+This repo contains my solutions to some LeetCode challenges written in Python. The repo will be periodically updated with more examples over time covering the following algorithms/data structures:
+
+- arrays
+- linked lists
+- strings
+- sort
+- binary search
+- hash tables
+
+
+Link to [LeetCode](https://leetcode.com/).
