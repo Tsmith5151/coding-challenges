@@ -4,7 +4,7 @@ def isValidSerialization(preorder):
         print(stack)
         while stack and node == stack[-1] == "#":
             stack.pop()
-            if not stack: 
+            if not stack:
                 return False
             stack.pop()
         stack.append(node)

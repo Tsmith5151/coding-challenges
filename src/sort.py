@@ -1,5 +1,6 @@
 from typing import List
 
+
 def sortColors(nums):
     """
     :type nums: List[int]
@@ -16,6 +17,7 @@ def sortColors(nums):
 
     nums[:] = [0] * red + [1] * white + [2] * blue
     return nums
+
 
 def restoreString(s, indices):
     """
@@ -34,8 +36,8 @@ class QuickSort:
     def __init__(self):
         self.threshold = 1
 
-    def sort(self, arr:List[int]):
-        self.helper(arr, low=0, high=len(arr)-1)
+    def sort(self, arr: List[int]):
+        self.helper(arr, low=0, high=len(arr) - 1)
         return arr
 
     def helper(self, arr, low, high):
@@ -61,12 +63,12 @@ class QuickSort:
         border = low
 
         # iterate over array
-        for i in range(low, high+1):
+        for i in range(low, high + 1):
             if arr[i] < pivotValue:
                 border += 1
-                #swap with border
+                # swap with border
                 arr[i], arr[border] = arr[border], arr[i]
-        
+
         # swap pivot value into the border position
         arr[low], arr[border] = arr[border], arr[low]
 

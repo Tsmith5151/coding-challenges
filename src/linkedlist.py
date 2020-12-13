@@ -1,41 +1,42 @@
-#Linked List
+# Linked List
 from typing import List
+
 
 class ListNode:
     def __init__(self, val=0, next=None):
-        self.val = val  
-        self.next = next #
-        
+        self.val = val
+        self.next = next  #
+
     def __repr__(self) -> str:
         return str(self.val)
 
+
 class Solution:
-    
     def __init__(self):
         pass
-    
+
     def __repr__(self) -> str:
         _list = self.traverse_linked_list(self.results)
         _list.append("None")
-        return ' -> '.join([str(i) for i in _list])
-    
+        return " -> ".join([str(i) for i in _list])
+
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         """ Merge two sorted list"""
         dummy = temp = ListNode(0)
-        while l1 != None and l2 != None: 
+        while l1 != None and l2 != None:
 
-            if l1.val < l2.val: 
-                temp.next = l1 
-                l1 = l1.next 
-            else: 
+            if l1.val < l2.val:
+                temp.next = l1
+                l1 = l1.next
+            else:
                 temp.next = l2
                 l2 = l2.next
             temp = temp.next
 
-        temp.next = l1 or l2 
-        self.results = dummy.next 
+        temp.next = l1 or l2
+        self.results = dummy.next
 
-    def traverse_linked_list(self, val=None, results =[]) -> List:
+    def traverse_linked_list(self, val=None, results=[]) -> List:
         """ Format Linked List"""
         if val == None:
             return
@@ -44,8 +45,8 @@ class Solution:
         return results
 
 
-if __name__ == '__main__':
-    
+if __name__ == "__main__":
+
     # List 1
     a = ListNode(1)
     b = ListNode(3)
@@ -67,4 +68,4 @@ if __name__ == '__main__':
     C.next = D
 
     solution = Solution()
-    results = solution.mergeTwoLists(a,A)
+    results = solution.mergeTwoLists(a, A)

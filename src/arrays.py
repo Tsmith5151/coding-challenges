@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def runningSum(nums):
     """
     :type nums: List[int]
@@ -10,6 +11,7 @@ def runningSum(nums):
         tmp += nums[i]
         myList.append(tmp)
     return myList
+
 
 def singleNumber(nums, results=[]):
     """
@@ -25,6 +27,7 @@ def singleNumber(nums, results=[]):
     non_dup = [v[0] for k, v in n_dict.items() if len(v) == 1][0]
     return non_dup
 
+
 def twoSum(nums, target):
     """
     :type nums: List[int]
@@ -38,6 +41,7 @@ def twoSum(nums, target):
             seen[nums[i]] = i
     return seen
 
+
 def maxSubArray_1(nums):
     """
     :type nums: List[int]
@@ -49,6 +53,7 @@ def maxSubArray_1(nums):
             myList.append(sum(nums[i : j + 1]))
     return max(myList)
 
+
 def maxSubArray_2(nums):
     """
     :type nums: List[int]
@@ -59,6 +64,7 @@ def maxSubArray_2(nums):
         current_sum = max(nums[i], nums[i] + current_sum)
         global_sum = max(current_sum, global_sum)
     return global_sum
+
 
 def _shuffle(nums, n):
     """
@@ -73,6 +79,7 @@ def _shuffle(nums, n):
         else:
             return myList
 
+
 def numIdenticalPairs(nums):
     """
     :type nums: List[int]
@@ -85,6 +92,7 @@ def numIdenticalPairs(nums):
                 myList.append([i, j])
     return len(myList)
 
+
 def smallerNumbersThanCurrent(nums):
     """
     :type nums: List[int]
@@ -94,6 +102,7 @@ def smallerNumbersThanCurrent(nums):
     for i in range(len(nums)):
         myList.append(len([1 for j in range(len(nums)) if nums[j] < nums[i]]))
     return myList
+
 
 def finalPrices(prices):
     """
@@ -111,6 +120,7 @@ def finalPrices(prices):
         myList.append(price)
     return myList + prices[-1:]
 
+
 def busyStudent(startTime, endTime, queryTime):
     """
     :type startTime: List[int]
@@ -124,5 +134,3 @@ def busyStudent(startTime, endTime, queryTime):
             for i in range(len(startTime))
         ]
     )
-
-
