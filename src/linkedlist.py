@@ -67,5 +67,4 @@ if __name__ == '__main__':
     C.next = D
 
     solution = Solution()
-    results = solution.mergeTwoLists(a,A)    
-    print(results)
+    results = solution.mergeTwoLists(a,A)
