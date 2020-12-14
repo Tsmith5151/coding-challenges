@@ -1,4 +1,26 @@
+from typing import List
 from collections import defaultdict
+
+
+def merge(intervals: List[List[int]]):
+    """
+    :type intervals: List[List[int]]
+    :rtype: List[List[int]]
+    """
+    
+    results = []
+    intervals.sort()
+    if intervals == []:
+        return []
+    
+    for interval in intervals:
+        if results == []:
+            results.append(interval)
+        elif interval[0] <= results[-1][1]:
+            results[-1] = [results[-1][0],max(results[-1][1],interval[1])]
+        else:
+            results.append(interval)
+    return results
 
 
 def runningSum(nums):
