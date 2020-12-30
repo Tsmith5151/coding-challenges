@@ -24,4 +24,26 @@ def balancedStringSplit(s):
             counter += -1
         if counter == 0:
             total += 1
+    
     return total
+
+
+def reverseString(s):
+    """
+    :type s: List[str]
+    :rtype: List[str]
+    """
+    return s[::-1]
+
+
+def firstUniqChar(s):
+    """ Index of First Non-Repeating Character
+    
+    :type s: str
+    :rtype: int
+    """
+    
+    for idx,i in enumerate(s):
+        if s.count(i) == 1:
+            return idx
+    return -1
