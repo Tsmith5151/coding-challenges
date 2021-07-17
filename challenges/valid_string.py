@@ -12,10 +12,11 @@ Open brackets must be closed in the correct order.
 - Use a stack (first in last out approach) to keep track of opening characters
 """
 
+
 def valid_string(string):
-    mapping = {')':'(',']':'[','}':'{'}
+    mapping = {")": "(", "]": "[", "}": "{"}
     stack = []
-    
+
     for s in string:
         if s in mapping and mapping[s] in stack:
             stack.remove(mapping[s])
@@ -23,8 +24,9 @@ def valid_string(string):
             stack.append(s)
     if stack:
         return False
-    else: 
+    else:
         return True
-        
-string = '([{}])'
+
+
+string = "([{}])"
 valid_string(string)

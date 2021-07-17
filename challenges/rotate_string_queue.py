@@ -25,6 +25,7 @@ Output: false
 Note: A and B will have length at most 100.
 """
 
+
 def rotateString(A: str, B: str) -> bool:
     if A == "" and B == "":
         return True
@@ -40,6 +41,7 @@ def rotateString(A: str, B: str) -> bool:
             return True
     return False
 
-A = 'abcde'
-B = 'cdeab'
-rotateString(A,B)
+
+A = "abcde"
+B = "cdeab"
+rotateString(A, B)

@@ -7,20 +7,22 @@ steps:
 
 """
 
+
 def minimumSwaps(x):
-    min_num_swaps = 0; 
-    i = 0; 
-    while (i < len(x)):  
+    min_num_swaps = 0
+    i = 0
+    while i < len(x):
         # check to see element == index
-        if (x[i] != i + 1): 
+        if x[i] != i + 1:
             # if not perform swap and increment
-            while (x[i] != i + 1): 
+            while x[i] != i + 1:
                 temp = x[x[i] - 1]
                 x[x[i] - 1] = x[i]
                 x[i] = temp
                 min_num_swaps += 1
-        i += 1; 
-    return min_num_swaps;
+        i += 1
+    return min_num_swaps
 
-x = [4,3,1,2]
+
+x = [4, 3, 1, 2]
 minimumSwaps(x)

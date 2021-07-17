@@ -23,6 +23,7 @@ Explanation: 2 does not exist in nums so return -1
 ```
 """
 
+
 def search(nums, target):
     """
     :type nums: List[int]
@@ -41,6 +42,7 @@ def search(nums, target):
             return pivot
     return -1
 
-nums = [-1,0,3,5,9,12]
+
+nums = [-1, 0, 3, 5, 9, 12]
 target = 9
-search(nums,target)
+search(nums, target)

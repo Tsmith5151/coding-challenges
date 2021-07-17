@@ -26,6 +26,7 @@ Explanation: In this case, for all items, you will not receive any discount at a
 ```
 """
 
+
 def finalPrices(prices):
     """
     :type prices: List[int]
@@ -42,5 +43,6 @@ def finalPrices(prices):
         myList.append(price)
     return myList + prices[-1:]
 
-prices = [8,4,6,2,3]
+
+prices = [8, 4, 6, 2, 3]
 finalPrices(prices)

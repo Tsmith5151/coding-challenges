@@ -41,14 +41,16 @@ Explanation: There are three ways to climb to the top.
 Reference: https://www.youtube.com/watch?v=NFJ3m9a1oJQ
 """
 
+
 @lru_cache(maxsize=1000)
 def climbStairs(n: int) -> int:
-    """ Top-Down Approach with Recursion"""
+    """Top-Down Approach with Recursion"""
     if n == 1:
         return 1
     if n == 2:
         return 2
     else:
         return climbStairs(n - 1) + climbStairs(n - 2)
+
 
 climbStairs(n=6)

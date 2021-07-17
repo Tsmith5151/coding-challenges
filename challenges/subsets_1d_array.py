@@ -1,4 +1,5 @@
 from typing import List
+
 """
 ## Subsets
 
@@ -21,4 +22,5 @@ def subsets(nums: List[int]) -> List[List[int]]:
         output += [curr + [n] for curr in output]
     return output
 
-subsets([1,2,3])
+
+subsets([1, 2, 3])

@@ -17,6 +17,7 @@ Output: 8
 
 """
 
+
 def countNegatives(grid):
     """
     :type grid: List[List[int]]
@@ -32,5 +33,5 @@ def countNegatives(grid):
     return count
 
 
-sample = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
+sample = [[4, 3, 2, -1], [3, 2, 1, -1], [1, 1, -1, -2], [-1, -1, -2, -3]]
 countNegatives(sample)

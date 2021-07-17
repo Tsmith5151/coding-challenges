@@ -17,6 +17,7 @@ Explanation: s can be split into "RL", "RRLL", "RL", "RL", each substring contai
 ```
 """
 
+
 def balancedStringSplit(s):
     """
     :type s: str
@@ -31,8 +32,9 @@ def balancedStringSplit(s):
             counter += -1
         if counter == 0:
             total += 1
-    
+
     return total
+
 
 s = "RLRRLLRLRL"
 balancedStringSplit(s)

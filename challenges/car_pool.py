@@ -39,24 +39,28 @@ Output: true
 ```
 """
 
+
 def carPooling(trips, capacity):
-    """ Cat Pooling """
-    
+    """Cat Pooling"""
+
     cur_capacity = 0
     rides = []
-        
+
     # [picked up location, # passengers in]  & [drop off location, # passengers out]
-    rides = [[trip[1], trip[0]] for trip in trips] + [[trip[-1], -trip[0]] for trip in trips]
+    rides = [[trip[1], trip[0]] for trip in trips] + [
+        [trip[-1], -trip[0]] for trip in trips
+    ]
     rides.sort()
 
     # check if at anypoint the current capacity > capacity
-    for time,passengers in rides:
+    for time, passengers in rides:
         cur_capacity += passengers
         if cur_capacity > capacity:
             return False
-        
+
     return True
 
-trips = [[2,1,5],[3,3,7]]
+
+trips = [[2, 1, 5], [3, 3, 7]]
 capacity = 4
-carPooling(trips,capacity)
+carPooling(trips, capacity)

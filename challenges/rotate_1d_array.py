@@ -7,7 +7,9 @@ index item moves to the highest index in a rotation. This is called a circular
 array.
 """
 
+
 def rotate(l, n):
     return l[n:] + l[:n]
 
-rotate([1,2,3,4,5],2)
+
+rotate([1, 2, 3, 4, 5], 2)

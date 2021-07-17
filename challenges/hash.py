@@ -31,6 +31,7 @@ hashMap.get(2);            // returns -1 (not found)
 
 """
 
+
 class HashMap(object):
     def __init__(self):
         """
@@ -87,12 +88,13 @@ class HashMap(object):
                 self.map[key].pop()
                 return True
 
+
 hashMap = HashMap()
-hashMap.put(1, 1)      
-hashMap.put(2, 2)         
-hashMap.get(1)          
-hashMap.get(3)           
-hashMap.put(2, 1);         
-hashMap.get(2);            
-hashMap.remove(2);         
-hashMap.get(2);
+hashMap.put(1, 1)
+hashMap.put(2, 2)
+hashMap.get(1)
+hashMap.get(3)
+hashMap.put(2, 1)
+hashMap.get(2)
+hashMap.remove(2)
+hashMap.get(2)

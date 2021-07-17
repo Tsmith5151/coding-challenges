@@ -27,6 +27,7 @@ Clearly the destination city is "A".
 ```
 """
 
+
 def destCity(paths):
     """
     :type paths: List[List[str]]
@@ -37,6 +38,7 @@ def destCity(paths):
         return results[0]
     else:
         return "No Destination!"
-    
-paths = [["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]]
+
+
+paths = [["London", "New York"], ["New York", "Lima"], ["Lima", "Sao Paulo"]]
 destCity(paths)

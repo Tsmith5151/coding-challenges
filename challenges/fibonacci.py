@@ -21,16 +21,18 @@ fib(5) => fib(4) + fib(3) => fib(3) + fib(2) + fib(2) + fib(1) => fib(2) + fib(1
 
 from functools import lru_cache
 
+
 @lru_cache(maxsize=1000)
-def fibonacci(n:int):
-    if n==0:
+def fibonacci(n: int):
+    if n == 0:
         return 0
-    elif n==1:
+    elif n == 1:
         return n
     else:
-        return fibonacci(n-1)+fibonacci(n-2)
-    
-if __name__ == '__main__':
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+if __name__ == "__main__":
     n = 10
-    for i in range(1,n+1):
+    for i in range(1, n + 1):
         print(fibonacci(i))

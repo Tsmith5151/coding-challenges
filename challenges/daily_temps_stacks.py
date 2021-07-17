@@ -25,11 +25,12 @@ Note: The length of temperatures will be in the range [1, 30000]. Each
 temperature will be an integer in the range [30, 100].
 """
 
+
 def dailyTemperatures(T):
-    """ Compute Temperatures using Stacks """
+    """Compute Temperatures using Stacks"""
     delta = [0] * len(T)
     stack = []
-    for i in range(0,len(T)):
+    for i in range(0, len(T)):
         while stack and T[i] > T[stack[-1]]:
             idx = stack.pop()
             delta[idx] = i - idx

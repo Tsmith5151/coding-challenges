@@ -10,17 +10,20 @@ Write a program that, given a number n, print out all numbers from 1 to n (inclu
 - For numbers divisible by 3 and 5, just print FizzBuzz
 - For example, given the input 1, your program should output:
 """
+
+
 def fizzbuzz(n):
-    """ FizzBuzz String Example"""
+    """FizzBuzz String Example"""
     if ((n % 3) == 0) and ((n % 5) == 0):
-        return 'FizzBuzz'
+        return "FizzBuzz"
     elif n % 3 == 0:
-        return 'Fizz'
+        return "Fizz"
     elif n % 5 == 0:
-        return 'Buzz'
+        return "Buzz"
     else:
         return n
 
+
 n = 15
-for i in range(1,n+1):
+for i in range(1, n + 1):
     print(fizzbuzz(i))

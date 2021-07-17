@@ -15,6 +15,7 @@ Output: ["o","l","l","e","h"]
 ```
 """
 
+
 def reverseString(s):
     """
     :type s: List[str]
@@ -22,5 +23,6 @@ def reverseString(s):
     """
     return s[::-1]
 
-s = ["h","e","l","l","o"]
+
+s = ["h", "e", "l", "l", "o"]
 reverseString(s)

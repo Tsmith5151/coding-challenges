@@ -35,6 +35,7 @@ You may assume that the input format is always valid, for example it could never
 ```
 """
 
+
 def isValidSerialization(preorder):
     preorder, stack = preorder.split(","), []
     for node in preorder:
@@ -46,6 +47,7 @@ def isValidSerialization(preorder):
             stack.pop()
         stack.append(node)
     return stack == ["#"]
+
 
 n = "3,4,#,#,1,#,#"
 isValidSerialization(n)

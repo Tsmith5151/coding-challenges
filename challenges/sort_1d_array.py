@@ -29,8 +29,9 @@ For this problem, we will implement, `Quicksort`. The performance will depend up
 
 """
 
+
 class QuickSort:
-    """  Quicksort Implementation"""
+    """Quicksort Implementation"""
 
     def __init__(self):
         self.threshold = 1
@@ -46,7 +47,7 @@ class QuickSort:
             self.helper(arr, p + 1, high)
 
     def get_pivot(self, arr, low, high):
-        """ get median pivot value"""
+        """get median pivot value"""
         mid = (high + low) // 2
         s = sorted([arr[low], arr[mid], arr[high]])
         if s[1] == arr[low]:
@@ -72,7 +73,8 @@ class QuickSort:
         arr[low], arr[border] = arr[border], arr[low]
 
         return border
-    
-n=[5,2,3,1]
+
+
+n = [5, 2, 3, 1]
 q = QuickSort().sort(n)
 print(q)

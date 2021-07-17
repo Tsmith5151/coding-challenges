@@ -14,7 +14,9 @@ Explanation: From left to right, it reads -121. From right to left, it becomes 1
 ```
 """
 
+
 def isPalindrome(x: int) -> bool:
     return True if str(x)[::-1] == str(x) else False
+
 
 isPalindrome(121)

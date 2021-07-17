@@ -13,11 +13,13 @@ Output: 5
 ```
 """
 
-def findKthLargest(nums,k):
-    nums.sort()
-    nums[len(nums)-k]
 
-nums = [3,2,3,1,2,4,5,5,6]
+def findKthLargest(nums, k):
+    nums.sort()
+    nums[len(nums) - k]
+
+
+nums = [3, 2, 3, 1, 2, 4, 5, 5, 6]
 k = 4
 
-findKthLargest(nums,k)
+findKthLargest(nums, k)

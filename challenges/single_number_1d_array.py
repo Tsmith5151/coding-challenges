@@ -14,7 +14,8 @@ Output: 1
 ```
 """
 
-def singleNumber(nums:List[int], results=[]):
+
+def singleNumber(nums: List[int], results=[]):
     """
     :type nums: List[int]
     :rtype: int
@@ -23,9 +24,10 @@ def singleNumber(nums:List[int], results=[]):
     n_dict = defaultdict(list)
     for n in nums:
         n_dict[n].append(n)
-    
+
     # Identify the non-dups from dicitonary
     non_dup = [v[0] for k, v in n_dict.items() if len(v) == 1][0]
     return non_dup
 
-singleNumber([2,2,1])
+
+singleNumber([2, 2, 1])

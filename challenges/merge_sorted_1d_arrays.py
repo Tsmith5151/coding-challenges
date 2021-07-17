@@ -24,6 +24,8 @@ results = [1,1,2,3,4,4]
 
 - Output = [-1,1,2,3,3,4,5,10,15]
 """
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -43,7 +45,7 @@ class Solution:
         return " -> ".join([str(i) for i in _list])
 
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        """ Merge two sorted list"""
+        """Merge two sorted list"""
         dummy = temp = ListNode(0)
         while l1 != None and l2 != None:
 
@@ -59,7 +61,7 @@ class Solution:
         self.results = dummy.next
 
     def traverse_linked_list(self, val=None, results=[]) -> List:
-        """ Format Linked List"""
+        """Format Linked List"""
         if val == None:
             return
         results.append(val.val)

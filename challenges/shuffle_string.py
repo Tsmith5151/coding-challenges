@@ -23,6 +23,7 @@ Explanation: After shuffling, each character remains in its position.
 ```
 """
 
+
 def restoreString(s, indices):
     """
     :type s: str
@@ -34,4 +35,5 @@ def restoreString(s, indices):
     string = "".join([encode[i] for i in range(0, len(indices))])
     return string
 
-restoreString("aiohn",[3,1,4,2,0])
+
+restoreString("aiohn", [3, 1, 4, 2, 0])

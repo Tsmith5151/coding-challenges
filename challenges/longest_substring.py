@@ -39,19 +39,20 @@ Output: 0
 ```
 """
 
+
 def lengthOfLongestSubstring(s):
-    """ Determine length of longest substring
-    
+    """Determine length of longest substring
+
     :type s: str
     :rtype: int
     """
-    
+
     cur_len = 0
     cur_idx = 0
-    longest = 0 
+    longest = 0
     dict_ = {}
 
-    for idx,letter in enumerate(s):
+    for idx, letter in enumerate(s):
 
         # check if seen and in our current substring
         if letter in dict_ and dict_[letter] >= cur_idx:
@@ -60,7 +61,7 @@ def lengthOfLongestSubstring(s):
             cur_idx = dict_[letter] + 1
 
             # update position
-            cur_len= idx - dict_[letter]
+            cur_len = idx - dict_[letter]
 
             # update position of duplicate
             dict_[letter] = idx
@@ -73,5 +74,6 @@ def lengthOfLongestSubstring(s):
 
     return longest
 
-s = 'pwwkew'
+
+s = "pwwkew"
 lengthOfLongestSubstring(s)

@@ -15,17 +15,20 @@ s = "loveleetcode"
 return 2.
 ```
 """
+
+
 def firstUniqChar(s):
-    """ Index of First Non-Repeating Character
-    
+    """Index of First Non-Repeating Character
+
     :type s: str
     :rtype: int
     """
-    
-    for idx,i in enumerate(s):
+
+    for idx, i in enumerate(s):
         if s.count(i) == 1:
             return idx
     return -1
 
-s = 'loveleetcode'
+
+s = "loveleetcode"
 firstUniqChar(s)

@@ -18,6 +18,8 @@ For nums[3]=2 there exist one smaller number than it (1).
 For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
 ```
 """
+
+
 def smallerNumbersThanCurrent(nums):
     """
     :type nums: List[int]
@@ -28,4 +30,5 @@ def smallerNumbersThanCurrent(nums):
         myList.append(sum([1 for j in range(len(nums)) if nums[j] < nums[i]]))
     return myList
 
-smallerNumbersThanCurrent([8,1,2,2,3])
+
+smallerNumbersThanCurrent([8, 1, 2, 2, 3])

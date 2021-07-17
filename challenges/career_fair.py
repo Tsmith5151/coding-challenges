@@ -23,13 +23,15 @@ Diagram
 ```
 """
 
-def universityCareerFair(arrival, duration, counter = 0, end: int = 0):
-    
+
+def universityCareerFair(arrival, duration, counter=0, end: int = 0):
+
     arr_dur = sorted(list(zip(arrival, duration)))
     for arr, dur in arr_dur:
         if arr >= end:
             end = arr + dur
             counter += 1
     return counter
+
 
 universityCareerFair([1, 3, 3, 5, 7], [2, 2, 1, 2, 1])

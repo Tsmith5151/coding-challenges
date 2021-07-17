@@ -22,25 +22,27 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 ```
 """
 
+
 def merge(intervals: List[List[int]]):
     """
     :type intervals: List[List[int]]
     :rtype: List[List[int]]
     """
-    
+
     results = []
     intervals.sort()
     if intervals == []:
         return []
-    
+
     for interval in intervals:
         if results == []:
             results.append(interval)
         elif interval[0] <= results[-1][1]:
-            results[-1] = [results[-1][0],max(results[-1][1],interval[1])]
+            results[-1] = [results[-1][0], max(results[-1][1], interval[1])]
         else:
             results.append(interval)
     return results
 
-intervals = [[1,4],[2,3]]
+
+intervals = [[1, 4], [2, 3]]
 merge(intervals)

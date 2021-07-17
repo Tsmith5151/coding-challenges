@@ -11,29 +11,31 @@
 
 """
 
+
 def binarySearch(arr, left, right, target):
-    """ 
-    Recursive Implementation of Binary Search 
+    """
+    Recursive Implementation of Binary Search
     """
     if right >= left:
         # get midpoint
         mid = (left + right) // 2
-        
-        # if midpoint == target 
+
+        # if midpoint == target
         if arr[mid] == x:
             return mid
-        
+
         # if midpoint value > target --> move to left side of midpoint
         elif arr[mid] > target:
-            return binarySearch(arr, left, mid-1, target)
-        
+            return binarySearch(arr, left, mid - 1, target)
+
         # if midpoint value < target --> move to right side of midpoint
         else:
-            return binarySearch(arr, mid+1, right, target)
+            return binarySearch(arr, mid + 1, right, target)
     else:
         return -1
 
-arr = [2,3,4,10,40]
+
+arr = [2, 3, 4, 10, 40]
 x = 10
-idx = binarySearch(arr,0,len(arr)-1,10)
+idx = binarySearch(arr, 0, len(arr) - 1, 10)
 print(idx)

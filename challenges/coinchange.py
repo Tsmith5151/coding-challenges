@@ -58,8 +58,9 @@ at `amount=4`.
 
 """
 
+
 def coinChange(coins: List[int], amount: int) -> int:
-    """ Bottom Up Approach """
+    """Bottom Up Approach"""
     stack = [amount + 1] * (amount + 1)
     stack[0] = 0
     for i in range(1, amount + 1):
@@ -73,4 +74,5 @@ def coinChange(coins: List[int], amount: int) -> int:
 
     return -1 if stack[amount] > amount else stack[-1]
 
-coinChange(coins=[1,2,5],amount=11)
+
+coinChange(coins=[1, 2, 5], amount=11)

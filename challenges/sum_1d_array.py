@@ -12,6 +12,7 @@ Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].
 ```
 """
 
+
 def runningSum(nums):
     """
     :type nums: List[int]
@@ -23,4 +24,5 @@ def runningSum(nums):
         myList.append(tmp)
     return myList
 
-runningSum([1,2,3,4])
+
+runningSum([1, 2, 3, 4])

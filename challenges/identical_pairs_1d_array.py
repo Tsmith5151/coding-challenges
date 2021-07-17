@@ -12,6 +12,7 @@ Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
 ```
 """
 
+
 def numIdenticalPairs(nums):
     """
     :type nums: List[int]
@@ -24,4 +25,5 @@ def numIdenticalPairs(nums):
                 myList.append([i, j])
     return len(myList)
 
-numIdenticalPairs([1,2,3,1,1,3])
+
+numIdenticalPairs([1, 2, 3, 1, 1, 3])

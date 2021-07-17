@@ -16,6 +16,7 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 complexity.
 """
 
+
 def maxSubArray_1(nums):
     """
     :type nums: List[int]
@@ -27,4 +28,5 @@ def maxSubArray_1(nums):
             myList.append(sum(nums[i : j + 1]))
     return max(myList)
 
-maxSubArray_1([-2,1,-3,4,-1,2,1,-5,4])
+
+maxSubArray_1([-2, 1, -3, 4, -1, 2, 1, -5, 4])

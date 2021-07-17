@@ -28,6 +28,7 @@ Explanation: The only student was doing their homework at the queryTime.
 ```
 """
 
+
 def busyStudent(startTime, endTime, queryTime):
     """
     :type startTime: List[int]
@@ -43,8 +44,8 @@ def busyStudent(startTime, endTime, queryTime):
     )
 
 
-startTime = [1,2,3]
-endTime = [3,2,7]
+startTime = [1, 2, 3]
+endTime = [3, 2, 7]
 queryTime = 4
 
-busyStudent(startTime,endTime,queryTime)
+busyStudent(startTime, endTime, queryTime)

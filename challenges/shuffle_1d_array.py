@@ -19,9 +19,10 @@ def shuffle1(nums, n):
     :type n: inta
     """
     myList = []
-    for i in list(zip(nums[:n],nums[n:])):
+    for i in list(zip(nums[:n], nums[n:])):
         myList.extend(i)
     return myList
+
 
 def shuffle2(nums, n):
     """
@@ -35,6 +36,7 @@ def shuffle2(nums, n):
             myList.append(nums[idx + n])
         else:
             return myList
-        
-shuffle1([2,5,1,3,4,7],n=3)
-shuffle2([2,5,1,3,4,7],n=3)
+
+
+shuffle1([2, 5, 1, 3, 4, 7], n=3)
+shuffle2([2, 5, 1, 3, 4, 7], n=3)

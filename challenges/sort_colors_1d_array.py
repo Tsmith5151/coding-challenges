@@ -30,6 +30,7 @@ Output: [0]
 ```
 """
 
+
 def sortColors(nums):
     """
     :type nums: List[int]
@@ -47,5 +48,6 @@ def sortColors(nums):
     nums[:] = [0] * red + [1] * white + [2] * blue
     return nums
 
-nums = [2,0,2,1,1,0]
+
+nums = [2, 0, 2, 1, 1, 0]
 sortColors(nums)

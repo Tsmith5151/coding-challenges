@@ -52,16 +52,18 @@ index 8: [ 4, -1, 2, 1, -5, 4 ] (index 3 to index 8)
 
 """
 
-def maxSubarraySum(nums:List[int]):
-    max_so_far,max_ending_here = nums[0],nums[0]
-    for i in range(len(nums)-1):
-        
+
+def maxSubarraySum(nums: List[int]):
+    max_so_far, max_ending_here = nums[0], nums[0]
+    for i in range(len(nums) - 1):
+
         # max(start new subarray, continue subarray)
-        max_ending_here = max(nums[i],max_ending_here + nums[i])
-        
+        max_ending_here = max(nums[i], max_ending_here + nums[i])
+
         # Did we beat the 'maxSoFar' with the 'maxEndingHere'?
-        max_so_far = max(max_ending_here,max_so_far)
+        max_so_far = max(max_ending_here, max_so_far)
     return max_so_far
 
-nums = [-2,1,-3,4,-1,2,1,-5,4]
+
+nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 maxSubarraySum(nums)
