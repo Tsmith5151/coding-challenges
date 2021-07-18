@@ -1,6 +1,7 @@
 """
 Find the max and min value in a binary tree
 
+Example: 
 	  2 
 	/   \
    7     5 
@@ -9,35 +10,44 @@ Find the max and min value in a binary tree
    	 / \   /
 	5	1  4
 
-Max = 9
-Min = 4
+Max = 9 - Min = 4
 """
 
 
 class Node:
-    def __init__(self, data):
+    def __init__(self, val):
         self.left = None
         self.right = None
-        self.key = data
+        self.val = val
 
 
-def inorder(tmp):
-    if not tmp:
-        return
-    inorder(tmp.left)
-    print(tmp.key, end=" ")
-    inorder(tmp.right)
+class BinaryTree(object):
+    def __init__(self, val):
+        self.root = Node(val)
+
+    def min_max(self):
+        """Iterative Solution"""
+        if self.root is None:
+            return 0
+        data = []
+        stack = [self.root]
+        while stack:
+            node = stack.pop()
+            if node.left:
+                data.append(node.left.val)
+                stack.append(node.left)
+            if node.right:
+                data.append(node.right.val)
+                stack.append(node.right)
+        return min(data), max(data)
 
 
 if __name__ == "__main__":
-    root = Node(2)
-    root.left = Node(7)
-    root.left.left = Node(2)
-    root.left.right = Node(6)
-    root.left.right.left = Node(5)
-    root.left.right.right = Node(1)
-    root.right = Node(5)
-    root.right.right = Node(9)
-    root.right.right.left = Node(4)
+    tree = BinaryTree(3)
+    tree.root.left = Node(9)
+    tree.root.right = Node(20)
+    tree.root.right.left = Node(15)
+    tree.root.right.right = Node(7)
 
-    inorder(root)
+    _min, _max = tree.min_max()
+    print(f"Min Value: {_min} -- Max Value: {_max}")

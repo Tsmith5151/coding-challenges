@@ -1,5 +1,5 @@
-"""
-Search if a value exists in a Binary Search Tree
+""" 
+Insert Array into a Binary Search Tree
 
 Array: [8,3,10,1,6]
      
@@ -12,9 +12,9 @@ Array: [8,3,10,1,6]
 
 
 class Node:
-    def __init__(self, val: int):
-        self.right = None
+    def __init__(self, val: int = None):
         self.left = None
+        self.right = None
         self.val = val
 
 
@@ -46,28 +46,6 @@ class BinarySearchTree(object):
         else:
             self._insert(val, self.root)
 
-    def _search(self, val: int, cur_node):
-        # search left side of tree
-        if val < cur_node.val and cur_node.left:
-            return self._search(val, cur_node.left)
-
-        # search right side of tree
-        elif val > cur_node.val and cur_node.right:
-            return self._search(val, cur_node.right)
-
-        if val == cur_node.val:
-            return True
-
-    def search(self, val: int):
-        if self.root:
-            is_found = self._search(val, self.root)
-            if is_found:
-                return True
-            else:
-                return False
-        else:
-            return None
-
 
 if __name__ == "__main__":
     tree = BinarySearchTree()
@@ -76,5 +54,3 @@ if __name__ == "__main__":
     tree.insert(8)
     tree.insert(1)
     tree.insert(6)
-
-    print(tree.search(3))

@@ -39,4 +39,4 @@ def dailyTemperatures(T):
 
 
 temps = [73, 74, 75, 71, 69, 72, 76, 73]
-dailyTemperatures(temps)
+print(dailyTemperatures(temps))

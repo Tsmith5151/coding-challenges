@@ -21,15 +21,19 @@ Input: nums = [-1,0,3,5,9,12], target = 2
 Output: -1
 Explanation: 2 does not exist in nums so return -1
 ```
+
+Steps:
+    - Compare x with the middle element.
+    - If x matches with the middle element, we return the mid index.
+    - Else if x is greater than the mid element, 
+        - Then x can only lie in the right (greater) half subarray after the mid element. 
+        - Then we apply the algorithm again for the right half.
+    - Else if x is smaller, the target x must lie in the left (lower) half. 
+        - So we apply the algorithm for the left half.
 """
 
 
 def search(nums, target):
-    """
-    :type nums: List[int]
-    :type target: int
-    :rtype: target = 9
-    """
     left = 0
     right = len(nums) - 1
     while left <= right:

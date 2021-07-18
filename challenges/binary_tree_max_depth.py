@@ -24,29 +24,26 @@ class Node:
         self.val = val
 
 
-def inorder(tmp):
-    if not tmp:
-        return
-    inorder(tmp.left)
-    print(tmp.val, end=" ")
-    inorder(tmp.right)
+class BinaryTree(object):
+    def __init__(self, val):
+        self.root = Node(val)
 
+    def _depth(self, cur_node):
+        if cur_node is None:
+            return 0
+        return 1 + max(self._depth(cur_node.left), self._depth(cur_node.right))
 
-def maxDepth(root) -> int:
-    """
-    :type root: TreeNode
-    :rtype: int
-    """
-    if not root:
-        return 0
-
-    return 1 + max(maxDepth(root.left), maxDepth(root.right))
+    def max_depth(self):
+        if not self.root:
+            return 0
+        return self._depth(self.root)
 
 
 if __name__ == "__main__":
-    root = Node(3)
-    root.left = Node(9)
-    root.right = Node(20)
-    root.right.left = Node(15)
-    root.right.right = Node(7)
-    print("Max Depth:", maxDepth(root))
+    tree = BinaryTree(3)
+    tree.root.left = Node(9)
+    tree.root.right = Node(20)
+    tree.root.right.left = Node(15)
+    tree.root.right.right = Node(7)
+
+    print(tree.max_depth())
