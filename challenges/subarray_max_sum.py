@@ -17,6 +17,7 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 
 
 def maxSubArray(nums):
+    """ O(n^2) space complexity """
     results = []
     for i in range(0, len(nums) - 1):
         for j in range(i, len(nums) - 1):

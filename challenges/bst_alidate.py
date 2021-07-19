@@ -1,4 +1,6 @@
 """
+Binary Search Tree
+
 1.) Every node of the right subtree has to be larger than current node
 2.) Every node on the left subtree is small than the current node
 3.) All nodes on the left side of the tree must be less than root node

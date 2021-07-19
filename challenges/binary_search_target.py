@@ -32,21 +32,25 @@ Steps:
         - So we apply the algorithm for the left half.
 """
 
+from typing import List
 
-def search(nums, target):
+
+def binary_search(nums: List[int], target: int):
+    """Implement Binary Search"""
     left = 0
     right = len(nums) - 1
-    while left <= right:
-        pivot = left + (right - left) // 2
-        if target > nums[pivot]:
-            left = pivot + 1
-        elif target < nums[pivot]:
-            right = pivot - 1
+    while left < right:
+        # midpoint index
+        idx = left + (right - left) // 2
+        if target > nums[idx]:
+            left = idx + 1
+        elif target < nums[idx]:
+            right = idx - 1
         else:
-            return pivot
+            return idx
     return -1
 
 
 nums = [-1, 0, 3, 5, 9, 12]
 target = 9
-search(nums, target)
+print(binary_search(nums, target))
