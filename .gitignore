@@ -1,2 +1,4 @@
 .python-version
 .ipynb_checkpoints/
+.DS_Store
+.vscode/ 
