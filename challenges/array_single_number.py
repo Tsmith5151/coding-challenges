@@ -1,8 +1,5 @@
-from typing import List
-from collections import defaultdict
-
 """
-## Single Number
+Single Number
 
 Link: https://leetcode.com/problems/single-number/
 
@@ -13,6 +10,9 @@ Input: [2,2,1]
 Output: 1
 ```
 """
+
+from typing import List
+from collections import defaultdict
 
 
 def singleNumber(nums: List[int], results=[]):

@@ -1,5 +1,5 @@
 """
-## First Unique Character in a String
+First Unique Character in a String
 
 Link: https://leetcode.com/problems/first-unique-character-in-a-string/
 

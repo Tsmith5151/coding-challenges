@@ -1,7 +1,5 @@
-from typing import List
-
 """
-## Subsets
+Subsets
 
 Link: https://leetcode.com/problems/subsets/
 
@@ -14,6 +12,9 @@ Input: nums = [1,2,3]
 Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 ```
 """
+
+from typing import List
+
 
 # Cascading approach
 def subsets(nums: List[int]) -> List[List[int]]:

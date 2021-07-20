@@ -8,17 +8,20 @@ Output = [1,1], [1,1]
 ```
 """
 from typing import List
-def sumKsubArray(nums:List[int],k:int):
-	"""" O(N^2) space complexity"""
-	results = []
-	for i in range(len(nums)):
-		for j in range(i, len(nums)):
-			sub = nums[i:j+1]
-			print(sub)
-			if sum(sub) == k:
-				print(sub)
-				results.append(sub)
-	return results 
 
-if __name__ == '__main__':
-	print(sumKsubArray([1,1,1],k=2))
+
+def sumKsubArray(nums: List[int], k: int):
+    """ " O(N^2) space complexity"""
+    results = []
+    for i in range(len(nums)):
+        for j in range(i, len(nums)):
+            sub = nums[i : j + 1]
+            print(sub)
+            if sum(sub) == k:
+                print(sub)
+                results.append(sub)
+    return results
+
+
+if __name__ == "__main__":
+    print(sumKsubArray([1, 1, 1], k=2))

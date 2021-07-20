@@ -1,5 +1,5 @@
 """
-## Reverse String
+Reverse String
 
 Link: https://leetcode.com/problems/reverse-string/
 

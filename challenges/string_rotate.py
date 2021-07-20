@@ -1,9 +1,5 @@
 """
-**Note:** A queue is a linear structure which follows a particular order in
-which the operations are performed. The order is First In First Out (FIFO)
-
-
-## Rotate String
+Rotate String
 
 Link: https://leetcode.com/problems/rotate-string/
     
@@ -23,6 +19,9 @@ Input: A = 'abcde', B = 'abced'
 Output: false
 ```
 Note: A and B will have length at most 100.
+
+Note: A queue is a linear structure which follows a particular order in
+which the operations are performed. The order is First In First Out (FIFO)
 """
 
 

@@ -1,14 +1,15 @@
 """
 Solution: Recursion
 
-## Fibonacci
+Fibonacci:
+
 Write a function fibonacci(n) that computes the Fibonacci number $F_n$, where $F_n$ is defined by the recurrence relation:
 
 $$ F_n = F_{n-1} + F_{n-2}$$
 with initial conditions of:
 $$ F_1 = 1,  F_2 = 1$$
 
-**Example**
+Example
 ```
 f = 5
 fib(1) => 1 == 1

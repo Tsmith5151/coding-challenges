@@ -1,14 +1,18 @@
 """
-## Two Sum
+Shuffle the Array
 
-Link: https://leetcode.com/problems/two-sum/
+Link: https://leetcode.com/problems/shuffle-the-array/
 
-Given an array of integers nums and integer target, return the indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.
+Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
+
+Return the array in the form [x1,y1,x2,y2,...,xn,yn].
+
+Example 1:
 
 ```
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Output: Because nums[0] + nums[1] == 9, we return [0, 1]
+Input: nums = [2,5,1,3,4,7], n = 3
+Output: [2,3,5,4,1,7] 
+Explanation: Since x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 then the answer is [2,3,5,4,1,7].
 ```
 """
 
@@ -16,7 +20,7 @@ Output: Because nums[0] + nums[1] == 9, we return [0, 1]
 def shuffle1(nums, n):
     """
     :type nums: List[int]
-    :type n: inta
+    :type n: int
     """
     myList = []
     for i in list(zip(nums[:n], nums[n:])):
@@ -38,5 +42,6 @@ def shuffle2(nums, n):
             return myList
 
 
-shuffle1([2, 5, 1, 3, 4, 7], n=3)
-shuffle2([2, 5, 1, 3, 4, 7], n=3)
+if __name__ == "__main__":
+    print(shuffle1([2, 5, 1, 3, 4, 7], n=3))
+    print(shuffle2([2, 5, 1, 3, 4, 7], n=3))

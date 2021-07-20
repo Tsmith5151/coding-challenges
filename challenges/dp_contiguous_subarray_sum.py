@@ -1,9 +1,9 @@
 """
-## Max Contiguous Subarray Sum
+Max Contiguous Subarray Sum
 
 Given an array with integers, return the sum of the subarray with the largest sum. A `subarray` is a subset of the original array that is contiguous and maintains the sequence of all elements from the original array.
 
-**Example**
+Example
 
 ```
 Input: [-2, 1, -3, 4, -1, 2, 1, -5, 4]
@@ -13,7 +13,7 @@ Explanation: The maximum sum subarray goes from index 3 to index 6 with a total 
 
 [Solution Reference](https://www.youtube.com/watch?v=2MmGzdiKR9Y)
 
-### Steps
+Steps:
 
 - Default to say the the best maximum seen so far is the first element.
 - Also default to say the the best max ending at the first element is the first element.
@@ -27,14 +27,14 @@ Explanation: The maximum sum subarray goes from index 3 to index 6 with a total 
             - Just take the item we are sitting at's value.
 - The `max` of these 2 choices will be the best answer to the Max Contiguous Subarray Sum we can achieve for subarrays ending at index i.
         
-**Example**
+Example
 ```
 index     0  1   2  3   4  5  6   7  8
 Input: [ -2, 1, -3, 4, -1, 2, 1, -5, 4 ]
 Answer   -2, 1, -2, 4,  3, 5, 6,  1, 5   
 ```
             
-**Explanation**
+Explanation
 
 ```
 index 0: [ -2 ]                 (index 0 to index 0)
@@ -51,6 +51,8 @@ index 8: [ 4, -1, 2, 1, -5, 4 ] (index 3 to index 8)
 - Notice how we are changing the end bound by 1 everytime.
 
 """
+
+from typing import List
 
 
 def maxSubarraySum(nums: List[int]):

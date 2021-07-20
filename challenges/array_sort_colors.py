@@ -1,5 +1,5 @@
 """
-## Sorrting Colors
+Sorting Colors
 
 Link: https://leetcode.com/problems/sort-colors/
         

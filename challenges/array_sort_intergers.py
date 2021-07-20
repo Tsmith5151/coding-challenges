@@ -5,7 +5,7 @@ Link: https://leetcode.com/problems/sort-an-array/
         
 Given an array of integers nums, sort the array in ascending order.
 
-**Example**
+Example
 ```
 Input: nums = [5,2,3,1]
 Output: [1,2,3,5]

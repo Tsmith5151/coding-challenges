@@ -1,5 +1,5 @@
 """
-## Intersection of Two Arrays II
+Intersection of Two Arrays II
 
 Link: https://leetcode.com/problems/intersection-of-two-arrays-ii/
 
@@ -80,30 +80,32 @@ Given two sorted arrays of integers - determine which elements interesect
 
 from typing import List
 
-def intersection(numsA:List[int], numsB:List[int]):
-    """ 
+
+def intersection(numsA: List[int], numsB: List[int]):
+    """
     Check which elements intersect
     Complexity = O(n) + m
     """
     intersect = []
-    i = 0 #pointers for numsA
-    j = 0 #pointer for numbB
+    i = 0  # pointers for numsA
+    j = 0  # pointer for numbB
     while i < len(A) and j < len(B):
-        # cases where interesect 
-        if numsA[i] == numsB[j] or i==0: # add edge case at the end
-            if numsA[i] != numsA[i-1]:
-                intersect .append(numsA[i])
+        # cases where interesect
+        if numsA[i] == numsB[j] or i == 0:  # add edge case at the end
+            if numsA[i] != numsA[i - 1]:
+                intersect.append(numsA[i])
             i += 1
             j += 1
 
         # sorted arrays -> so move i up if less than j
-        elif numsA[i] < numsB[j]: 
+        elif numsA[i] < numsB[j]:
             i += 1
         else:
-            j += 1 
-    return intersect 
-			
-if __name__ == '__main__':
-    A = [2,3,3,5,6,11]
-    B = [3,3,7,15,31]
-    print(intersection(A,B))
+            j += 1
+    return intersect
+
+
+if __name__ == "__main__":
+    A = [2, 3, 3, 5, 6, 11]
+    B = [3, 3, 7, 15, 31]
+    print(intersection(A, B))

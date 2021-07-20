@@ -1,5 +1,5 @@
 """
-## University Career Fair (Twitter)
+University Career Fair (Twitter)
 
 Sam is part of the organizing team arranging the university's career fair and has a list of companies and their respective arrival times and durations. Due to the university-wide budget cuts, there is only one stage available on the entire campus so only one event can occur at a time. Given each company's arrival time and the duration they will stay, determine the max number of events that can be hosted during the fair.
 

@@ -1,8 +1,5 @@
 """
-**Note:** is a linear data structure which follows a particular order in which
-the operations are performed. The order may be LIFO(Last In First Out)
-
-## Daily Temperatures
+Daily Temperatures
 
 Link: https://leetcode.com/problems/daily-temperatures/
 
@@ -22,6 +19,10 @@ Output should be:
 
 Note: The length of temperatures will be in the range [1, 30000]. Each
 temperature will be an integer in the range [30, 100].
+
+Note: a stack is a linear data structure which follows a particular order in which
+the operations are performed. The order may be LIFO(Last In First Out)
+
 """
 
 

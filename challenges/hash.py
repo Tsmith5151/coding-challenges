@@ -1,5 +1,5 @@
 """
-## Design HashMap
+Design HashMap
 
 Link: https://leetcode.com/problems/design-hashmap/
 
@@ -12,7 +12,8 @@ get(key): Returns the value to which the specified key is mapped, or -1 if this 
 remove(key) : Remove the mapping for the value key if this map contains the mapping for the key.
 
 
-**Example**
+Example
+
 ```
 MyHashMap hashMap = new MyHashMap();
 hashMap.put(1, 1);          

@@ -1,5 +1,5 @@
 """
-## Palindrome Number
+Palindrome Number
 
 Link: https://leetcode.com/problems/palindrome-number/
 

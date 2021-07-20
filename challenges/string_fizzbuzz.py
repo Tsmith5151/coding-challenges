@@ -1,5 +1,5 @@
 """
-## FizzBuzz
+FizzBuzz
 
 Link: https://leetcode.com/explore/featured/card/top-interview-questions-easy/102/math/743/
 

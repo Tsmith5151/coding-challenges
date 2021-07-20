@@ -1,5 +1,5 @@
 """
-## Shuffle String
+Shuffle String
 
 Given a string s and an integer array indices of the same length.
 
@@ -8,7 +8,7 @@ The string s will be shuffled such that the character at the ith position moves 
 Return the shuffled string.
 
 
-**Example**
+Example
 
 ```python
 Input: s = "codeleet", indices = [4,5,6,7,0,2,1,3]

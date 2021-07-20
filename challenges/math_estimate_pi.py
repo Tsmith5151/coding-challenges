@@ -1,9 +1,10 @@
-"""import numpy as np
-## Estimate Pi
+"""
+Estimate Pi
 Given a uniform random generator  [0,1] , write a a function compute_pi to
 compute  𝜋 .
 """
 
+import numpy as np
 from typing import List
 
 

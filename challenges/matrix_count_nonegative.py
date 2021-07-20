@@ -8,7 +8,7 @@ Given a m * n matrix grid which is sorted in non-increasing order both row-wise 
 Return the number of negative numbers in grid.
 
 
-**Example**
+Example
 
 ```
 Input: grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]

@@ -1,7 +1,5 @@
-from typing import List
-
 """
-## Coin Change
+Coin Change
 
 Link: https://leetcode.com/problems/coin-change/
 
@@ -50,13 +48,15 @@ Output: 2
 To explain, first we create an array that is called `stack` in the code to keep
 track of the minimum ways to make change for each element, where each element
 in this array of length(amount) is initially set as a placeholder (amount +1 ).
-The goal is to visit all indicies in the amount array (e.g. [1,2,3,4,....A])
+The goal is to visit all indices in the amount array (e.g. [1,2,3,4,....A])
 and then look at all of the subproblems before the current index to determine
 what is the minimum number of coins we could use. Note, if we are using coins
 [1,2,5] to make change for `11`, then for example, we can only use coins [1,2]
 at `amount=4`. 
 
 """
+
+from typing import List
 
 
 def coinChange(coins: List[int], amount: int) -> int:

@@ -1,5 +1,5 @@
 """
-## Split a String in Balanced Strings
+Split a String in Balanced Strings
 
 Link: https://leetcode.com/problems/split-a-string-in-balanced-strings/
 
@@ -9,7 +9,7 @@ Given a balanced string s split it in the maximum amount of balanced strings.
 
 Return the maximum amount of splitted balanced strings.
 
-**Example** 
+Example
 ```
 Input: s = "RLRRLLRLRL"
 Output: 4

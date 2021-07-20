@@ -1,8 +1,5 @@
-# Linked List
-from typing import List
-
 """
-## Merge Two Sorted Lists
+Merge Two Sorted Lists
 
 Link: https://leetcode.com/problems/merge-two-sorted-lists/
 
@@ -17,13 +14,16 @@ Output:
 results = [1,1,2,3,4,4]
 ```
 
-### Example
+Example
 
 - List_1 = [1,3,5,10,15]
 - List_2 = [-1,2,3,4]
 
 - Output = [-1,1,2,3,3,4,5,10,15]
 """
+
+# Linked List
+from typing import List
 
 
 class ListNode:

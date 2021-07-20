@@ -1,5 +1,5 @@
 """
-## Destination City
+Destination City
 
 Link: https://leetcode.com/problems/destination-city/
 

@@ -18,21 +18,21 @@ def binary_search(nums: List[int], target: int) -> List[int]:
             left = mid + 1
         elif target < nums[mid]:
             right = mid - 1
-        else: # mid == target
+        else:  # mid == target
             # first index of array - edge case
             if mid - 1 < 0:
-                return mid 
-            # found first element 
+                return mid
+            # found first element
             if nums[mid - 1] != target:
                 return mid
-            # move right pointer 
+            # move right pointer
             else:
                 right = mid - 1
-    return mid 
-    
+    return mid
+
 
 if __name__ == "__main__":
-    # idx = [0    1    2    3     4    5    
+    # idx = [0    1    2    3     4    5
     nums = [100, 105, 110, 115, 115, 150]
     target = 110
     print(binary_search(nums, target))

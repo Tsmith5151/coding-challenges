@@ -12,12 +12,12 @@ Output: 6
 Explanation: [4,-1,2,1] has the largest sum = 6.
 ```
 
-**Note:** Solution below is a brute force implementation with O(n^2) complexity.
+Note: Solution below is a brute force implementation with O(n^2) complexity.
 """
 
 
 def maxSubArray(nums):
-    """ O(n^2) space complexity """
+    """O(n^2) space complexity"""
     results = []
     for i in range(0, len(nums) - 1):
         for j in range(i, len(nums) - 1):

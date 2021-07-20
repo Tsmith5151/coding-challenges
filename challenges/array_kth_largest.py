@@ -1,5 +1,5 @@
 """
-## Kth Largest Value in Array
+Kth Largest Value in Array
 
 Link: https://leetcode.com/problems/kth-largest-element-in-an-array/
 
