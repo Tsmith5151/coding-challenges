@@ -1,6 +1,6 @@
 """
-Determine whether a given interger sum can be factored down into the sum
-of all the squared digits equaling to 1. If, return True, else enter a
+Determine whether a given integer's sum can be factored down into the sum
+of all the squared digits equaling to 1. If so, return True, else enter a
 continuous loop.
 
 Example:
