@@ -6,6 +6,7 @@ in Python. The repo will be periodically updated with more examples
 over time covering the following problem types:
 
 - Arrays
+- Binary Search
 - Binary Trees
 - Dynamic Programming
 - Hashmap
