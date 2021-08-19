@@ -1,13 +1,15 @@
 # Python Coding Challenges
 
 This repo contains my solutions to some LeetCode and HackerRank challenges
-written in Python. The repo will be periodically updated with more examples
+in addition to scripts covering various data structures/algorithms written
+in Python. The repo will be periodically updated with more examples
 over time covering the following problem types:
 
 - Arrays
 - Binary Trees
 - Dynamic Programming
 - Hashmap
+- Heaps
 - Linked List
 - Matrix
 - Probability
@@ -17,7 +19,7 @@ over time covering the following problem types:
 - Stacks
 - Strings
 
-**References**
+### References
 
 Link to [LeetCode](https://leetcode.com/) and
 [HackerRank](https://www.hackerrank.com/). Also, credit given to the following
@@ -26,10 +28,3 @@ and other general Python fundamentals.
 
 - backtobackswe
 - The Hitchhiker’s Guide to Python
-
-
-## Machine Learning
-
-In addition to Python coding challenges (e.g. data structures and algoirthms), the 
-`machinelearning` notebook covers implementing - Logistic Regression, Linear Regression, 
-Deep Learning (MLP), and Singular Value Decomposition from scratch. 

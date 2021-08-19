@@ -24,5 +24,4 @@ def maxSubArray(nums):
             results.append(nums[i : j + 1])
     return max([sum(i) for i in results])
 
-
 print(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
