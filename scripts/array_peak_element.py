@@ -22,14 +22,16 @@ Explanation: Your function can return either index number 1 where the peak
 element is 2, or index number 5 where the peak element is 6.
 """
 
-def findPeakElement(nums):
-	"""
-	:type nums: List[int]
-	:rtype: int
-	"""
-	max_num = max(nums)
-	return nums.index(max_num)
 
-if __name__ == '__main__':
-	nums = [1,2,1,3,5,6,4]
-	print(findPeakElement(nums))
+def findPeakElement(nums):
+    """
+    :type nums: List[int]
+    :rtype: int
+    """
+    max_num = max(nums)
+    return nums.index(max_num)
+
+
+if __name__ == "__main__":
+    nums = [1, 2, 1, 3, 5, 6, 4]
+    print(findPeakElement(nums))

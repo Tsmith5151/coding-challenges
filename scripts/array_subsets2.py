@@ -12,20 +12,22 @@ Input: nums = [1,2,2]
 Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]
 """
 
+
 def subsetsWithDup(nums):
-	"""
-	:type nums: List[int]
-	:rtype: List[List[int]]
-	"""
-	nums.sort()
-	output = [[]]
-	for n in nums:
-		output += [curr + [n] for curr in output]
+    """
+    :type nums: List[int]
+    :rtype: List[List[int]]
+    """
+    nums.sort()
+    output = [[]]
+    for n in nums:
+        output += [curr + [n] for curr in output]
 
-	# get unique pairs
-	unique = set([tuple(i) for i in output])
-	return [list(i) for i in unique]
+    # get unique pairs
+    unique = set([tuple(i) for i in output])
+    return [list(i) for i in unique]
 
-if __name__ == '__main__':
-   nums = [4,4,4,1,4]
-   print(subsetsWithDup(nums))
+
+if __name__ == "__main__":
+    nums = [4, 4, 4, 1, 4]
+    print(subsetsWithDup(nums))

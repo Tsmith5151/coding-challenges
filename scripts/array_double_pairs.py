@@ -18,27 +18,28 @@ Explanation: We can take two groups, [-2,-4] and [2,4] to form [-2,-4,2,4] or [2
 """
 import collections
 
+
 def canReorderDoubled(arr):
-	"""
-	:type arr: List[int]
-	:rtype: bool
- 
-	Greedy search: nlogn
-	"""
-	neg = [i for i in arr if i < 0]
-	pos = [i for i in arr if i > 0]
-	arr = sorted(neg,reverse=True) + sorted(pos)
-	c = collections.Counter(arr)
-	for i in arr:
-		if c[i] == 0:
-			continue
-		if c[i*2] == 0:
-			return False
-		c[i] -= 1
-		c[i*2] -= 1
-	return True
+    """
+    :type arr: List[int]
+    :rtype: bool
+
+    Greedy search: nlogn
+    """
+    neg = [i for i in arr if i < 0]
+    pos = [i for i in arr if i > 0]
+    arr = sorted(neg, reverse=True) + sorted(pos)
+    c = collections.Counter(arr)
+    for i in arr:
+        if c[i] == 0:
+            continue
+        if c[i * 2] == 0:
+            return False
+        c[i] -= 1
+        c[i * 2] -= 1
+    return True
 
 
-if __name__ == '__main__':
-	arr = [4,-2,2,-4]
-	print(canReorderDoubled(arr))
+if __name__ == "__main__":
+    arr = [4, -2, 2, -4]
+    print(canReorderDoubled(arr))

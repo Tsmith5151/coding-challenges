@@ -17,18 +17,20 @@ Input:
 Output: True
 """
 
-def check(x:int) -> bool:
-	"""
-	Check if conditions is True
-	
-	:param x: int
-	"""
-	if x == 1:
-		return True
-	else:
-		number = [int(str(x)[i])**2 for i in range(len(str(x)))]
-		return check(sum(number))
+
+def check(x: int) -> bool:
+    """
+    Check if conditions is True
+
+    :param x: int
+    """
+    if x == 1:
+        return True
+    else:
+        number = [int(str(x)[i]) ** 2 for i in range(len(str(x)))]
+        return check(sum(number))
+
 
 if __name__ == "__main__":
-	num = 19
-	print(check(num))
+    num = 19
+    print(check(num))

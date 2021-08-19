@@ -13,7 +13,7 @@ Output: 5
 ```
 """
 
-#O(log(n))
+# O(log(n))
 def findKthLargest(nums, k):
     """
     :type nums: List[int]
@@ -23,7 +23,10 @@ def findKthLargest(nums, k):
     nums.sort()
     nums[len(nums) - k]
 
+
 import heapq
+
+
 def findKthLargest2(nums, k):
     """
     Using min heap to find kth largest
@@ -36,13 +39,13 @@ def findKthLargest2(nums, k):
     for num in nums:
         heapq.heappush(heap, num)
         if len(heap) > k:
-            # pop the smallest element 
+            # pop the smallest element
             heapq.heappop(heap)
     return heapq.heappop(heap)
-    
-    
-if __name__ == '__main__':
-    nums = [3,2,1,5,6,4]
+
+
+if __name__ == "__main__":
+    nums = [3, 2, 1, 5, 6, 4]
     k = 2
-    #print(findKthLargest(nums, k))
+    # print(findKthLargest(nums, k))
     print(findKthLargest2(nums, k))

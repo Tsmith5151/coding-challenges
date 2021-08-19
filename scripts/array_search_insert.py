@@ -12,6 +12,7 @@ You must write an algorithm with O(log n) runtime complexity.
  
 """
 
+
 def searchInsert(nums, target):
     """
     :type nums: List[int]
@@ -20,7 +21,8 @@ def searchInsert(nums, target):
     """
     return sorted(nums + [target]).index(target)
 
-if __name__ == '__main__':
-    nums = [1,3,5,6]
+
+if __name__ == "__main__":
+    nums = [1, 3, 5, 6]
     target = 5
-	searchInsert(nums, target)
+    searchInsert(nums, target)
