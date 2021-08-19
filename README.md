@@ -1,9 +1,9 @@
 # Python Coding Challenges
 
-This repo contains my solutions to some LeetCode and HackerRank challenges
-in addition to scripts covering various data structures/algorithms written
-in Python. The repo will be periodically updated with more examples
-over time covering the following problem types:
+This repo contains my solutions to some LeetCode and HackerRank challenges in
+addition to scripts covering various data structures/algorithms written in
+Python. The repo will be periodically updated with more examples over time
+covering the following problem types:
 
 - Arrays
 - Binary Search
@@ -27,5 +27,5 @@ Link to [LeetCode](https://leetcode.com/) and
 resources which helped gain a deep understanding of data structures/algorithms
 and other general Python fundamentals. 
 
-- backtobackswe
+- [backtobackswe](https://www.youtube.com/c/BackToBackSWE)
 - The Hitchhiker’s Guide to Python
