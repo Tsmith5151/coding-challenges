@@ -18,21 +18,22 @@ Since "d" does not appear in order, it can be at any position in the returned st
 """
 from collections import defaultdict
 
+
 def customSortString(order, string):
-	"""
-	:type order: str
-	:type s: str
-	:rtype: str
-	"""
-	look_up = defaultdict(int)
-	i = 0
-	for c in order:
-		look_up[c] = i
-		i += 1
-	return "".join(sorted(string, key=lambda x: look_up.get(x,100)))
+    """
+    :type order: str
+    :type s: str
+    :rtype: str
+    """
+    look_up = defaultdict(int)
+    i = 0
+    for c in order:
+        look_up[c] = i
+        i += 1
+    return "".join(sorted(string, key=lambda x: look_up.get(x, 100)))
 
 
-if __name__ == '__main__':
-	order = "cba"
-	s = "abcd"
-	print(customSortString(order,s))
+if __name__ == "__main__":
+    order = "cba"
+    s = "abcd"
+    print(customSortString(order, s))
