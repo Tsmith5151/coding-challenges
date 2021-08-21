@@ -1,15 +1,62 @@
 """
-Rotations
-A left rotation operation on an array shifts each of the array's elements 1
-unit to the left. For example, if 2 left rotations are performed on array
-[1,2,3,4,5], then the array would become [3,4,5,1,2]. Note that the lowest
-index item moves to the highest index in a rotation. This is called a circular
-array.
+Rotate Array
+
+Reference: https://leetcode.com/problems/rotate-array/ Given an array, rotate
+the array to the right by k steps, where k is non-negative.
+
+Example:
+
+Input: nums = [1,2,3,4,5,6,7], k = 3
+Output: [5,6,7,1,2,3,4]
+Explanation:
+rotate 1 steps to the right: [7,1,2,3,4,5,6]
+rotate 2 steps to the right: [6,7,1,2,3,4,5]
+rotate 3 steps to the right: [5,6,7,1,2,3,4]
+Example 2:
+
+Input: nums = [-1,-100,3,99], k = 2
+Output: [3,99,-1,-100]
+Explanation: 
+rotate 1 steps to the right: [99,-1,-100,3]
+rotate 2 steps to the right: [3,99,-1,-100]
 """
 
 
-def rotate(l, n):
-    return l[n:] + l[:n]
+def _rotate(nums, left, right):
+    """Helper function to rotate array"""
+    # reverse the array
+    while left < right:
+        nums[left], nums[right] = nums[right], nums[left]
+        left, right = left + 1, right - 1
+    return nums
 
 
-rotate([1, 2, 3, 4, 5], 2)
+def rotate(nums, k):
+    """
+    :type nums: List[int]
+    :type k: int
+    :rtype: None Do not return anything, modify nums in-place instead.
+    """
+
+    # if k > len of array
+    k = k % len(nums)
+
+    # rotate entire array
+    l, r = 0, len(nums) - 1
+    nums = _rotate(nums, l, r)
+
+    # rotate first k elements
+    l, r = 0, k - 1
+    nums = _rotate(nums, l, r)
+
+    # rotate last k elements
+    l, r = k, len(nums) - 1
+    nums = _rotate(nums, l, r)
+    return nums
+
+
+if __name__ == "__main__":
+    nums = [1, 2, 3, 4, 5, 6, 7]
+    k = 3
+    print("Input:", nums)
+    print("Output:", rotate(nums, k))

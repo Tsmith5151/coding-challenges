@@ -30,6 +30,7 @@ Input: intervals = [], newInterval = [5,7]
 Output: [[5,7]]
 """
 
+
 def insert(intervals, newInterval):
     """
     :type intervals: List[List[int]]
@@ -38,7 +39,7 @@ def insert(intervals, newInterval):
     """
     output = []
     pointer = 0
-	# keep track of pointer to the start of the new interval
+    # keep track of pointer to the start of the new interval
     for start, end in intervals:
         if start < newInterval[0]:
             output.append([start, end])
@@ -62,6 +63,6 @@ def insert(intervals, newInterval):
 
 
 if __name__ == "__main__":
-    intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]] 
+    intervals = [[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]]
     newInterval = [4, 8]
     print(insert(intervals, newInterval))

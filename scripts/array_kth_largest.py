@@ -41,6 +41,7 @@ def findKthLargest2(nums, k):
         if len(heap) > k:
             # pop the smallest element
             heapq.heappop(heap)
+    # pop smallest element (e.g. will be len(2)) to return largest value
     return heapq.heappop(heap)
 
 
