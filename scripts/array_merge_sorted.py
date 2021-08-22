@@ -1,95 +1,62 @@
+""" 
+Merge Sorted Array
+
+Reference: https://leetcode.com/problems/merge-sorted-array/
+
+You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+
+Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+
+The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+
+Example 1:
+
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+Output: [1,2,2,3,5,6]
+Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
+Example 2:
+
+Input: nums1 = [1], m = 1, nums2 = [], n = 0
+Output: [1]
+Explanation: The arrays we are merging are [1] and [].
+The result of the merge is [1].
+
+Time Complexity = O(n)
 """
-Merge Two Sorted Lists
-
-Link: https://leetcode.com/problems/merge-two-sorted-lists/
-
-Merge two sorted linked lists and return it as a new sorted list. The new list should be made by splicing together the nodes of the first two lists.
-
-**Example:**
-```
-Input: 
-l1 = [1,2,4]
-l2 = [1,3,4]
-Output: 
-results = [1,1,2,3,4,4]
-```
-
-Example
-
-- List_1 = [1,3,5,10,15]
-- List_2 = [-1,2,3,4]
-
-- Output = [-1,1,2,3,3,4,5,10,15]
-"""
-
-# Linked List
-from typing import List
 
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next  #
+def merge(nums1, m, nums2, n):
+    """
+    :type nums1: List[int]
+    :type m: int
+    :type nums2: List[int]
+    :type n: int
+    :rtype: None Do not return anything, modify nums1 in-place instead.
+    """
+    # start at last index of nums1
+    last = m + n - 1
 
-    def __repr__(self) -> str:
-        return str(self.val)
+    # merge in reverse order
+    while m > 0 and n > 0:
+        if nums1[m - 1] > nums2[n - 1]:
+            # replace last position
+            nums1[last] = nums1[m - 1]
+            m -= 1
+        else:
+            nums1[last] = nums2[n - 1]
+            n -= 1
+        last -= 1
 
-
-class Solution:
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        _list = self.traverse_linked_list(self.results)
-        _list.append("None")
-        return " -> ".join([str(i) for i in _list])
-
-    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
-        """Merge two sorted list"""
-        dummy = temp = ListNode(0)
-        while l1 != None and l2 != None:
-
-            if l1.val < l2.val:
-                temp.next = l1
-                l1 = l1.next
-            else:
-                temp.next = l2
-                l2 = l2.next
-            temp = temp.next
-
-        temp.next = l1 or l2
-        self.results = dummy.next
-
-    def traverse_linked_list(self, val=None, results=[]) -> List:
-        """Format Linked List"""
-        if val == None:
-            return
-        results.append(val.val)
-        self.traverse_linked_list(val.next)
-        return results
+    # edge case: if nums1 index[0] is greater than nums2 remaining 
+    # fill nums1 with leftover elements from nums2
+    while n > 0:
+        nums1[last] = nums2[n - 1]
+        n, last = n - 1, last - 1
+    return nums1
 
 
 if __name__ == "__main__":
-
-    # List 1
-    a = ListNode(1)
-    b = ListNode(3)
-    c = ListNode(5)
-    d = ListNode(10)
-    e = ListNode(15)
-    a.next = b
-    b.next = c
-    c.next = d
-    d.next = e
-
-    # List 2
-    A = ListNode(-1)
-    B = ListNode(2)
-    C = ListNode(3)
-    D = ListNode(4)
-    A.next = B
-    B.next = C
-    C.next = D
-
-    solution = Solution()
-    results = solution.mergeTwoLists(a, A)
+    nums1 = [1, 2, 3, 0, 0, 0]
+    nums2 = [2, 5, 6]
+    print(merge(nums1, 3, nums2, 3))

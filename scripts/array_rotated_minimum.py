@@ -17,41 +17,42 @@ You must write an algorithm that runs in O(log n) time.
 
  """
 
+
 def findMin(nums):
-	"""
-	:type nums: List[int]
-	:rtype: int
+    """
+    :type nums: List[int]
+    :rtype: int
 
-	Reference: https://www.youtube.com/watch?v=nIVW4P8b1VA
-	
-	Solution: modified binary search with complexity O(log n).
-	"""
-	results = nums[0]
-	left = 0
-	right = len(nums) - 1
-	while left <= right:
+    Reference: https://www.youtube.com/watch?v=nIVW4P8b1VA
 
-		# if input array is sorted
-		if nums[left] < nums[right]:
-			results = min(results, nums[left])
-			break
+    Solution: modified binary search with complexity O(log n).
+    """
+    results = nums[0]
+    left = 0
+    right = len(nums) - 1
+    while left <= right:
 
-		# Compute midpoint
-		mid = (left + right) // 2
-		results = min(results, nums[mid])
+        # if input array is sorted
+        if nums[left] < nums[right]:
+            results = min(results, nums[left])
+            break
 
-		# if midpoint is apart of the left sorted portion: 
-		if nums[mid] >= nums[left]:
-			# search the right side of the array
-			left = mid + 1
+        # Compute midpoint
+        mid = (left + right) // 2
+        results = min(results, nums[mid])
 
-		# if midpoint is apart of the right sorted portion: 
-		if nums[mid] <= nums[left]:
-			right = mid - 1
+        # if midpoint is apart of the left sorted portion:
+        if nums[mid] >= nums[left]:
+            # search the right side of the array
+            left = mid + 1
 
-	return results
+        # if midpoint is apart of the right sorted portion:
+        if nums[mid] <= nums[left]:
+            right = mid - 1
 
-if __name__ == '__main__':
-    nums = [4,5,6,7,0,1,2]
+    return results
+
+
+if __name__ == "__main__":
+    nums = [4, 5, 6, 7, 0, 1, 2]
     print(findMin(nums))
-        
