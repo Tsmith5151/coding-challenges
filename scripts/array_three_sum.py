@@ -23,6 +23,8 @@ Output: []
 Solution: pointers  
 Time complexity: O(nlogn) + O(n^2) = O(n^2)
 Space complexity: O(1) or O(n)
+
+Reference: https://www.youtube.com/watch?v=jzZsG8n2R9A
 """
 
 def threeSum(nums):
