@@ -48,7 +48,7 @@ def merge(nums1, m, nums2, n):
             n -= 1
         last -= 1
 
-    # edge case: if nums1 index[0] is greater than nums2 remaining 
+    # edge case: if nums1 index[0] is greater than nums2 remaining
     # fill nums1 with leftover elements from nums2
     while n > 0:
         nums1[last] = nums2[n - 1]

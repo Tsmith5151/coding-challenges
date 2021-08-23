@@ -52,35 +52,36 @@ Solution: Min-Heap
 """
 import heapq
 
+
 def getOrder(tasks):
-	"""
-	:type tasks: List[List[int]]
-	:rtype: List[int]
-	"""
-	# keep track of the original index
-	tasks = [[i[0], i[1], idx] for idx, i in enumerate(tasks)]
-	# sort the input tasks by enqueue time
-	tasks.sort(key=lambda t: t[0])
+    """
+    :type tasks: List[List[int]]
+    :rtype: List[int]
+    """
+    # keep track of the original index
+    tasks = [[i[0], i[1], idx] for idx, i in enumerate(tasks)]
+    # sort the input tasks by enqueue time
+    tasks.sort(key=lambda t: t[0])
 
-	results,min_heap = [],[]
-	# initialize time with smallest enqueue time
-	cur_time = min(tasks, key=lambda t: t[0])[0]
-	idx = 0
-	while min_heap or idx < len(tasks):
-		while idx < len(tasks) and cur_time >= tasks[idx][0]:
-			# only add the task processing time and original idx to heap
-			heapq.heappush(min_heap, tasks[idx][1], tasks[idx][2])
-			idx += 1
-		if not min_heap:
-			pass
-		else:
-			# pop the task with smallest processing time
-			time,original_idx = heapq.heappop(min(min_heap[0]))
-			# increment global time
-			cur_time += time 
-			results.append(original_idx)
+    results, min_heap = [], []
+    # initialize time with smallest enqueue time
+    cur_time = min(tasks, key=lambda t: t[0])[0]
+    idx = 0
+    while min_heap or idx < len(tasks):
+        while idx < len(tasks) and cur_time >= tasks[idx][0]:
+            # only add the task processing time and original idx to heap
+            heapq.heappush(min_heap, tasks[idx][1], tasks[idx][2])
+            idx += 1
+        if not min_heap:
+            pass
+        else:
+            # pop the task with smallest processing time
+            time, original_idx = heapq.heappop(min(min_heap[0]))
+            # increment global time
+            cur_time += time
+            results.append(original_idx)
 
-	return results
+    return results
 
 
 if __name__ == "__main__":
