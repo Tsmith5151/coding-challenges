@@ -25,5 +25,5 @@ def numIdenticalPairs(nums):
                 myList.append([i, j])
     return len(myList)
 
-
-numIdenticalPairs([1, 2, 3, 1, 1, 3])
+if __name__ == "__main__":  
+    print(numIdenticalPairs([1,2,3,1,1,3]))

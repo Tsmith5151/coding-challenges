@@ -28,6 +28,9 @@ Example 3:
 
 Input: intervals = [], newInterval = [5,7]
 Output: [[5,7]]
+
+Solution: pointers 
+Reference: https://www.youtube.com/watch?v=A8NUOmlwOlM
 """
 
 
@@ -47,10 +50,12 @@ def insert(intervals, newInterval):
         else:
             break
 
-    # insert of merge our new interval
+    # insert or merge our new interval
+    # insert:
     if not output or output[-1][1] < newInterval[0]:
         output.append(newInterval)
     else:
+    # append:
         output[-1][1] = max(output[-1][1], newInterval[1])
 
     # insert or merge all the remaining intervals

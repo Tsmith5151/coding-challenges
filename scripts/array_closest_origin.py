@@ -19,18 +19,17 @@ Explanation:
 The distance between (1, 3) and the origin is sqrt(10).
 The distance between (-2, 2) and the origin is sqrt(8).
 Since sqrt(8) < sqrt(10), (-2, 2) is closer to the origin.
-We only want the closest k = 1 points from the origin, so the answer is just [[-2,2]].
+
+Solution : Min Heap -->  min heap contains k maximum
+Complexity = K(logn)
 """
 
 
 def kClosest(points, k):
     """
-        :type points: List[List[int]]
-        :type k: int
-        :rtype: List[List[int]]
-
-    Solution = using a min heap
-    Complexity = K(logn)
+    :type points: List[List[int]]
+    :type k: int
+    :rtype: List[List[int]]
     """
     import heapq
 

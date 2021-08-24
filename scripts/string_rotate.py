@@ -26,6 +26,11 @@ which the operations are performed. The order is First In First Out (FIFO)
 
 
 def rotateString(A: str, B: str) -> bool:
+    """
+    :type s: str
+    :type goal: str
+    :rtype: bool
+    """
     if A == "" and B == "":
         return True
 
@@ -41,6 +46,7 @@ def rotateString(A: str, B: str) -> bool:
     return False
 
 
-A = "abcde"
-B = "cdeab"
-rotateString(A, B)
+if __name__ == "__main__":
+    A = "abcde"
+    B = "cdeab"
+    print(rotateString(A, B))

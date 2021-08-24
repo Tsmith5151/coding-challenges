@@ -22,8 +22,10 @@ Explanation:
 2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
 7 is a candidate, and 7 = 7.
 These are the only two combinations.
-"""
 
+Solution: Depth First Search
+Reference: https://www.youtube.com/watch?v=GBKI9VSKdGg
+"""
 
 def combinationSum(candidates, target):
     """
@@ -34,8 +36,6 @@ def combinationSum(candidates, target):
     results = []
 
     def dfs(idx, cur, total):
-        """Depth for Search Helper"""
-
         # base case: if solution is found
         if total == target:
             # append combination to results
@@ -48,12 +48,11 @@ def combinationSum(candidates, target):
         # recursive case:
         cur.append(candidates[idx])
 
-        # create two branch decision
-        # if including current index
+        # branch 1:  include current candidate
         dfs(idx, cur, total + candidates[idx])
-        cur.pop()
 
-        # if not including current index
+        # branch 2: if not including current candidate
+        cur.pop() # remove element from cur to avoid duplicates
         dfs(idx + 1, cur, total)
 
     # call dfs function

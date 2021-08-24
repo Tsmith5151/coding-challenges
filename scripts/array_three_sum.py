@@ -27,42 +27,44 @@ Space complexity: O(1) or O(n)
 Reference: https://www.youtube.com/watch?v=jzZsG8n2R9A
 """
 
+
 def threeSum(nums):
-	"""
-	:type nums: List[int]
-	:rtype: List[List[int]]
-	"""
-	results = []
-	# sort the input array to avoid duplicates
-	nums.sort()
-	
-	# iterate through the array
-	for idx, i in enumerate(nums):
-		# to avoid using the same value twice and continue to next iteration
-		if idx > 0 and i == nums[idx-1]:
-			continue
-		# apply two sum approach: set the left and right pointers
-		left = idx + 1
-		right = len(nums) - 1
-		while left < right:
-			threeSum = i + nums[left] + nums[right]
-			# threshold is target 0
-			if threeSum  > 0:
-				right -= 1
-			# threshold target
-   			elif threeSum < 0:
-				left += 1
-			# if the sum is 0, add to results
-   			else:
-				results.append([i, nums[left], nums[right]])
-				left += 1
-				# update the left most pointer now
-				# update the left and check if the value is the same 
-				while nums[left] == nums[left -1] and left < right:
-					left += 1
+    """
+    :type nums: List[int]
+    :rtype: List[List[int]]
+    """
+    results = []
+    # sort the input array to avoid duplicates
+    nums.sort()
 
-	return results
+    # iterate through the array
+    for idx, i in enumerate(nums):
+        # to avoid using the same value twice and continue to next iteration
+        if idx > 0 and i == nums[idx - 1]:
+            continue
+        # apply two sum approach: set the left and right pointers
+        left = idx + 1
+        right = len(nums) - 1
+        while left < right:
+            threeSum = i + nums[left] + nums[right]
+            # threshold is target 0
+            if threeSum > 0:
+                right -= 1
+            # threshold target
+            elif threeSum < 0:
+                left += 1
+            # if the sum is 0, add to results
+            else:
+                results.append([i, nums[left], nums[right]])
+                left += 1
+                # update the left most pointer now
+                # update the left and check if the value is the same
+                while nums[left] == nums[left - 1] and left < right:
+                    left += 1
 
-if __name__ == '__main__':
-    nums = [-1,0,1,2,-1,-4]
+    return results
+
+
+if __name__ == "__main__":
+    nums = [-1, 0, 1, 2, -1, -4]
     print(threeSum(nums))

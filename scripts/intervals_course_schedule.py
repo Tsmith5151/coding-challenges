@@ -37,46 +37,50 @@ from typing import List
 
 
 def findOrder(numCourses, prerequisites):
-	"""
-	:type numCourses: int
-	:type prerequisites: List[List[int]]
-	:rtype: List[int]
-	"""
-	# create premappings
-	preMap = {i:[] for i in range(numCourses)} 
-	for course, pre in prerequisites:
-		preMap[course].append(pre)
+    """
+    :type numCourses: int
+    :type prerequisites: List[List[int]]
+    :rtype: List[int]
+    """
+    # create premappings
+    preMap = {i: [] for i in range(numCourses)}
+    for course, pre in prerequisites:
+        preMap[course].append(pre)
 
-	# create visited mapping along with DFS traversal
-	visited = set()
+    # create visited mapping along with DFS traversal
+    visited = set()
 
-	def dfs(course):
-		""" Depth First Search - recursive approach"""
-		# base case -> if course is already visited, return (avoid loop) 
-		if course in visited: 
-			return False # means this course cannot be completed (loop)
+    def dfs(course):
 
-		# if course does not have any prerequisites, return True 
-		if preMap[course] == []:
-			return True
+        """Depth First Search - recursive approach"""
+        # base case -> if course is already visited, return (avoid loop)
+        if course in visited:
+            return False  # means this course cannot be completed (loop)
 
-		# currently visiting this course and apply DFS on prerequisites
-		visited.add(course)
-		for pre in preMap[course]:
-			# if DFS return false, means this course cannot be completed
-			if not dfs(pre): return False 
+        # if course does not have any prerequisites, return True
+        if preMap[course] == []:
+            return True
 
-		# otherwise remove course from visited as this is a valid course/prerequisite
-		visited.remove(course)
-		preMap[course] = [] 
-		return True
+        # currently visiting this course and apply DFS on prerequisites
+        visited.add(course)
+        for pre in preMap[course]:
+            # if DFS return false, means this course cannot be completed
+            if not dfs(pre):
+                return False
 
-	# call DFS for each course
-	for course in range(numCourses):
-		if not dfs(course): return False
-	return True 
+        # otherwise remove course from visited as this is a valid course/prerequisite
+        visited.remove(course)
+        preMap[course] = []
+        return True
 
-if __name__ == '__main__':
-	numCourses = 5
-	prereq = [[0,1], [0,2], [1,3], [1,4] ,[3,4]]
-	print(findOrder(numCourses, prereq))
+    # call DFS for each course
+    for course in range(numCourses):
+        if not dfs(course):
+            return False
+    return True
+
+
+if __name__ == "__main__":
+    numCourses = 5
+    prereq = [[0, 1], [0, 2], [1, 3], [1, 4], [3, 4]]
+    print(findOrder(numCourses, prereq))

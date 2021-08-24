@@ -21,7 +21,7 @@ Output: [[1,5]]
 Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 ```
 """
-
+from typing import List
 
 def merge(intervals: List[List[int]]):
     """
@@ -43,6 +43,7 @@ def merge(intervals: List[List[int]]):
             results.append(interval)
     return results
 
+if __name__ == "__main__":
+    intervals = [[1,3],[2,6],[8,10],[15,18]]
+    print(merge(intervals))
 
-intervals = [[1, 4], [2, 3]]
-merge(intervals)

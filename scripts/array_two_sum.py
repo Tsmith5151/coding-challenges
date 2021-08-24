@@ -26,10 +26,11 @@ def twoSum(nums, target):
             seen[nums[i]] = i
     return seen
 
-def twoSum2(nums,target):
+
+def twoSum2(nums, target):
     """
     :type nums: List[int]
-    :type target: int 
+    :type target: int
 
     Approach: using two pointers
     Time complexity: O(n)
@@ -39,18 +40,19 @@ def twoSum2(nums,target):
     while left_pointer <= right_pointer:
         # compute sum of current left and right pointers
         curSum = nums[right_pointer] + nums[left_pointer]
-        # if sum is greater than target, move right pointer left 
-        if curSum > target: 
+        # if sum is greater than target, move right pointer left
+        if curSum > target:
             right_pointer -= 1
-        # if sum is less than target, move left pointer right 
-        if curSum < target: 
+        # if sum is less than target, move left pointer right
+        if curSum < target:
             left_pointer += 1
-        # if sum is equal to target, return results 
+        # if sum is equal to target, return results
         else:
             return [left_pointer + 1, right_pointer + 1]
-    return [] 
+    return []
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     nums = [2, 7, 11, 15]
     target = 9
     # print(twoSum(nums, target))

@@ -43,6 +43,6 @@ def finalPrices(prices):
         myList.append(price)
     return myList + prices[-1:]
 
-
-prices = [8, 4, 6, 2, 3]
-finalPrices(prices)
+if __name__ == "__main__":
+    prices = [8,4,6,2,3]
+    print(finalPrices(prices))
