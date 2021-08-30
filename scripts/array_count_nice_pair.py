@@ -27,6 +27,9 @@ Example 2:
 
 Input: nums = [13,10,35,24,76]
 Output: 4
+
+Time Complexity: O(N)
+Space Complexity: O(N)
 """
 import collections
 
@@ -36,6 +39,7 @@ def countNicePairs(nums):
 	:rtype: int
 	"""
 	def rev(x):
+		""" Reverse String """
 		return int(str(x)[::-1])
 
 	MOD = 10**9 + 7
