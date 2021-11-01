@@ -21,13 +21,15 @@ Input: nums = [1,1,1]
 Output: 0
 """
 
+
 def minMoves(nums):
-	"""
-	:type nums: List[int]
-	:rtype: int
-	"""
-	return sum(nums) - min(nums)*len(nums)
-	
-if __name__ == '__main__':
-    nums = [1,2,3]
-    print(minMoves(nums))        
+    """
+    :type nums: List[int]
+    :rtype: int
+    """
+    return sum(nums) - min(nums) * len(nums)
+
+
+if __name__ == "__main__":
+    nums = [1, 2, 3]
+    print(minMoves(nums))

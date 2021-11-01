@@ -55,7 +55,7 @@ def insert(intervals, newInterval):
     if not output or output[-1][1] < newInterval[0]:
         output.append(newInterval)
     else:
-    # append:
+        # append:
         output[-1][1] = max(output[-1][1], newInterval[1])
 
     # insert or merge all the remaining intervals

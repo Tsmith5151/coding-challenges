@@ -28,37 +28,37 @@ and (4, 5).
 
 """
 
+
 def findPairs(nums, k):
-	"""
-	:type nums: List[int]
-	:type k: int
+    """
+    :type nums: List[int]
+    :type k: int
 
-	Approach: using two pointers
-	Time complexity: O(n)
-	"""
-	nums = list(set(nums))
-	nums.sort()	
-	results = []
-	left_pointer = 0
-	right_pointer = len(nums) - 1
+    Approach: using two pointers
+    Time complexity: O(n)
+    """
+    nums = list(set(nums))
+    nums.sort()
+    results = []
+    left_pointer = 0
+    right_pointer = len(nums) - 1
 
-	while left_pointer <= right_pointer:
-		# compute sum of current left and right pointers
-		curDiff = abs(nums[right_pointer] - nums[left_pointer])
-		# if diff is greater than target, move right pointer left
-		if curDiff < k:
-			right_pointer += 1
-		# if diff is less than target, move left pointer right
-		if curDiff > k:
-			left_pointer += 1
-		# if diff is equal to target, return results
-		else:
-			results.append([left_pointer + 1, right_pointer + 1])
-	return results 
+    while left_pointer <= right_pointer:
+        # compute sum of current left and right pointers
+        curDiff = abs(nums[right_pointer] - nums[left_pointer])
+        # if diff is greater than target, move right pointer left
+        if curDiff < k:
+            right_pointer += 1
+        # if diff is less than target, move left pointer right
+        if curDiff > k:
+            left_pointer += 1
+        # if diff is equal to target, return results
+        else:
+            results.append([left_pointer + 1, right_pointer + 1])
+    return results
 
 
-if __name__ == '__main__':
-	nums = [3,1,4,1,5]
-	k = 2
-	print(findPairs(nums, k))
-    
+if __name__ == "__main__":
+    nums = [3, 1, 4, 1, 5]
+    k = 2
+    print(findPairs(nums, k))

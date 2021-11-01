@@ -41,7 +41,7 @@ def findDifferentBinaryString(nums):
     :type nums: List[str]
     :rtype: str
     """
-    unique_strings = {num for num in nums} 
+    unique_strings = {num for num in nums}
 
     def backtracking(idx, cur_string):
         """
@@ -58,7 +58,7 @@ def findDifferentBinaryString(nums):
         if res:
             return res
 
-		# recursive case -> replace with "1"
+        # recursive case -> replace with "1"
         cur_string[idx] = "1"
         res = backtracking(idx + 1, cur_string)
         if res:

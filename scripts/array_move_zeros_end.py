@@ -18,24 +18,25 @@ Output: [0]
 Time complexity = O(n)
 """
 
-def moveZeroes(nums):
-	"""
-	:type nums: List[int]
-	:rtype: None Do not return anything, modify nums in-place instead.
-	"""
-	i = 0
-	n = len(nums)
-	zeros = 0
-	while i < n - zeros:
-		if nums[i] == 0: # if num is zero
-			nums.insert(n, 0) # move it to the back
-			del nums[i] # remove from current index
-			zeros += 1 # add a zero to help define loop break
-		else:
-			i += 1 # nonzero, so move pointer along by 1 
-	return nums 
 
-  
-if __name__ == '__main__':
-    nums = [0,1,0,3,12]
+def moveZeroes(nums):
+    """
+    :type nums: List[int]
+    :rtype: None Do not return anything, modify nums in-place instead.
+    """
+    i = 0
+    n = len(nums)
+    zeros = 0
+    while i < n - zeros:
+        if nums[i] == 0:  # if num is zero
+            nums.insert(n, 0)  # move it to the back
+            del nums[i]  # remove from current index
+            zeros += 1  # add a zero to help define loop break
+        else:
+            i += 1  # nonzero, so move pointer along by 1
+    return nums
+
+
+if __name__ == "__main__":
+    nums = [0, 1, 0, 3, 12]
     print(moveZeroes(nums))

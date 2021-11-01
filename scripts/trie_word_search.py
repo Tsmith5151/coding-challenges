@@ -84,7 +84,9 @@ class WordDictionary(object):
                 if c == ".":
                     # use backtracking/recursion
                     for child in cur.children.values():
-                        if dfs(i + 1, child):  # since we are skipping "."; +1 increment
+                        if dfs(
+                            i + 1, child
+                        ):  # since we are skipping "."; +1 increment
                             return True
                         # if a match is not found:
                         else:

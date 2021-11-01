@@ -27,6 +27,7 @@ Solution: Depth First Search
 Reference: https://www.youtube.com/watch?v=GBKI9VSKdGg
 """
 
+
 def combinationSum(candidates, target):
     """
     :type candidates: List[int]
@@ -52,7 +53,7 @@ def combinationSum(candidates, target):
         dfs(idx, cur, total + candidates[idx])
 
         # branch 2: if not including current candidate
-        cur.pop() # remove element from cur to avoid duplicates
+        cur.pop()  # remove element from cur to avoid duplicates
         dfs(idx + 1, cur, total)
 
     # call dfs function
