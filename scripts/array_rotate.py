@@ -19,6 +19,24 @@ Output: [3,99,-1,-100]
 Explanation: 
 rotate 1 steps to the right: [99,-1,-100,3]
 rotate 2 steps to the right: [3,99,-1,-100]
+
+Solution:
+Time Complexity: O(n) -> Modify in place
+Memory Complexity: O(1)
+
+Note: 
+
+k = 2 
+x = [1,2,3,4,5]
+
+|  |  | 1 | 2 | 3 | 
+
+when moving an element to the right and it's outside the length of the
+array (e.g. 4 & 5), we can use (i + k) % len(nums) to position the element at
+the correct index. 
+
+Example: i =4; (3 + 2) % 5 = index = 0
+Example: i = 5; (4 + 2) % 5 = index = 1
 """
 
 
@@ -38,10 +56,10 @@ def rotate(nums, k):
     :rtype: None Do not return anything, modify nums in-place instead.
     """
 
-    # if k > len of array
+    # if k > len of array ---> in case k > len(array)
     k = k % len(nums)
 
-    # rotate entire array
+    # initial rotation of the input array
     l, r = 0, len(nums) - 1
     nums = _rotate(nums, l, r)
 

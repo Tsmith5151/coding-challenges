@@ -1,10 +1,10 @@
 """
 Calculate the size of a binary tree (number of nodes in tree)
 
-            1
+			1
 		   / \
 		  2   3
-	    /  \ 
+		/  \ 
 	   4   5
 
 size = 5
