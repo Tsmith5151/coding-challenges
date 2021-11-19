@@ -13,21 +13,28 @@ Output: [1,2,3,5]
 
 ### Explanation 
 
-For this problem, we will implement, `Quicksort`. The performance will depend upon the position of the pivot with worse case O(n2) and best case being O(n log n).
+For this problem, we will implement, `Quicksort`. The performance will depend
+upon the position of the pivot with worse case O(n2) and best case being O(n
+log n). 
 
-- Iterate over each element in the list and check if it's smaller than the
-  pivot
+- Iterate over each element in the list and check if it's smaller than the pivot. 
 
-- The pivot splits the list in half and is often taken as the median of initial, mean, and ending value of the list.
-- Next, move the pivot value to index_0
+- The pivot splits the list in half and is often taken as the median of
+  initial, mean, and ending value of the list. 
+- Next, move the pivot value to index_0.   
 
-- Now we will have two pointers, "i" at index_1 and "j" at index_2. We will loop over the list and check if j is less than the 
-pivot, if so we will swap the values of i and j advance the pointers. In this case, everything less than the index of i is less than the pivot value and everything to the right of i is greater than the pivot value. If j is greater than the pivot value, keep incrementing the index of j to to the end of list. 
+- Now we will have two pointers, "i" at index_1 and "j" at index_2. We will
+  loop over the list and check if j is less than the  pivot, if so we will swap
+  the values of i and j advance the pointers. In this case, everything less
+  than the index of i is less than the pivot value and everything to the right
+  of i is greater than the pivot value. If j is greater than the pivot value,
+  keep incrementing the index of j to to the end of list. 
 
 - Next swap the pivot value with value in index i.
     - smaller == left partition
     - larger == right partition
-- This is a recursive function and we can now call the quick sort algorithm on the left hand and right hand side of the list. 
+- This is a recursive function and we can now call the quick sort algorithm on
+  the left hand and right hand side of the list.  
 
 [Reference](https://www.youtube.com/watch?v=uXBnyYuwPe8)
 [Reference](https://www.youtube.com/watch?v=CB_NCoxzQnk)

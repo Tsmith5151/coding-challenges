@@ -18,6 +18,7 @@ Example 2:
 Input: s = "rat", t = "car"
 Output: false
 
+Solution: counter 
 Time Complexity : O(s + t)
 Memory Complexity : O(s + t)
 """

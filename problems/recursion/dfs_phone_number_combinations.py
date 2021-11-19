@@ -15,7 +15,8 @@ Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 Input: digits = "2"
 Output: ["a","b","c"]
 
-time complexity: O(n*4^n)
+Solution: dfs
+Time complexity: O(n*4^n)
 4^n is the number of possible combinations
 """
 

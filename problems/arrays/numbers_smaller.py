@@ -31,4 +31,6 @@ def smallerNumbersThanCurrent(nums):
     return myList
 
 
-smallerNumbersThanCurrent([8, 1, 2, 2, 3])
+if __name__ == "__main__":
+    nums = [8, 1, 2, 2, 3]
+    print(smallerNumbersThanCurrent(nums))
