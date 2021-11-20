@@ -32,6 +32,10 @@ Example diagram:
 0======================30
 	5====15
 		 15=======25
+   
+# Rearrange as: 
+start = 0,5,15
+end = 10,20,30 
 """
 
 
@@ -45,10 +49,8 @@ def minMeetingRooms(intervals):
     start = sorted([i[0] for i in intervals])
     end = sorted([i[1] for i in intervals])
     results, counter = 0, 0
-    s, e = (
-        0,
-        0,
-    )
+    s = 0
+    e = 0
 
     # loop through intervals until end of array
     while s < len(intervals):
@@ -59,7 +61,7 @@ def minMeetingRooms(intervals):
             # move pointer of end time
             e += 1
             counter -= 1  # end of meeting
-        results = max(results, counter)
+        results = max(results, counter)  # max available rooms
     return results
 
 
