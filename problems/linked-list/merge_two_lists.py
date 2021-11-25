@@ -5,21 +5,20 @@ Link: https://leetcode.com/problems/merge-two-sorted-lists/
 
 Merge two sorted linked lists and return it as a new sorted list. The new list should be made by splicing together the nodes of the first two lists.
 
-**Example:**
-```
+Example:
 Input: 
 l1 = [1,2,4]
 l2 = [1,3,4]
 Output: 
 results = [1,1,2,3,4,4]
-```
 
 Example
+List_1 = [1,3,5,10,15]
+List_2 = [-1,2,3,4]
+Output = [-1,1,2,3,3,4,5,10,15]
 
-- List_1 = [1,3,5,10,15]
-- List_2 = [-1,2,3,4]
-
-- Output = [-1,1,2,3,3,4,5,10,15]
+Solution: Linked List
+Time Complexity: O(n)
 """
 
 # Linked List
@@ -47,17 +46,23 @@ class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         """Merge two sorted list"""
         dummy = temp = ListNode(0)
+
+        # iterate over both lists and are non-empty
         while l1 != None and l2 != None:
 
+            # if value if list 1 < list 2 -> insert into tail
             if l1.val < l2.val:
                 temp.next = l1
                 l1 = l1.next
+            # if value in list 2 <= list 1 -> insert into tail
             else:
                 temp.next = l2
                 l2 = l2.next
+
+            # update tail
             temp = temp.next
 
-        temp.next = l1 or l2
+        temp.next = l1 or l2  # at least one is non-null
         self.results = dummy.next
 
     def traverse_linked_list(self, val=None, results=[]) -> List:

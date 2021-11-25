@@ -56,7 +56,9 @@ def combinationSum2(candidates, target):
             if candidates[j] == prev:
                 continue
 
-            cur_combination.append(candidates[j])  # append value to the current combination
+            cur_combination.append(
+                candidates[j]
+            )  # append value to the current combination
             backtracking(cur_combination, j + 1, cur_target - candidates[j])
             cur_combination.pop()  # remove the last value from the current combination
 

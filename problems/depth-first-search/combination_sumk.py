@@ -49,11 +49,12 @@ def combinationSum(candidates, target):
         # recursive case:
         cur.append(candidates[idx])
 
-        # branch 1:  include current candidate
+        # left branch: decide to include current candidate
         dfs(idx, cur, total + candidates[idx])
 
-        # branch 2: if not including current candidate
-        cur.pop()  # remove element from cur to avoid duplicates
+        # right brach: decide to not include current candidate
+        # remove element from cur to avoid duplicates
+        cur.pop()
         dfs(idx + 1, cur, total)
 
     # call dfs function
