@@ -29,11 +29,11 @@ Only need one meeting room
 time complexity: O(nlogn)
 
 Example diagram:
-0======================30
-	5====15
-		 15=======25
-   
-# Rearrange as: 
+# 0======================30
+# 	5====15
+# 		 15=======25
+
+Rearrange as: 
 start = 0,5,15
 end = 10,20,30 
 """
