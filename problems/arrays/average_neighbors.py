@@ -1,4 +1,5 @@
-""" Array With Elements Not Equal to Average of Neighbors
+""" 
+Array With Elements Not Equal to Average of Neighbors
 
 Reference:
 https://leetcode.com/problems/array-with-elements-not-equal-to-average-of-neighbors/
@@ -21,6 +22,10 @@ Explanation:
 When i=1, nums[i] = 2, and the average of its neighbors is (1+4) / 2 = 2.5.
 When i=2, nums[i] = 4, and the average of its neighbors is (2+5) / 2 = 3.5.
 When i=3, nums[i] = 5, and the average of its neighbors is (4+3) / 2 = 3.5.
+
+Solution: two pointers
+Time complexity: O(nlogn) -> note we have to sort the input array. 
+Reference: https://www.youtube.com/watch?v=Wmb3YdVYfqM    
 """
 
 
@@ -28,9 +33,6 @@ def rearrangeArray(nums):
     """
     :type nums: List[int]
     :rtype: List[int]
-
-    Reference: https://www.youtube.com/watch?v=Wmb3YdVYfqM
-    Time complexity: O(nlogn)
     """
     nums.sort()
     results = []

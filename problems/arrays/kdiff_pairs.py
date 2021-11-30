@@ -1,5 +1,5 @@
 """ 
- K-sum Pairs in an Array
+K-sum Pairs in an Array
  
 Reference: https://leetcode.com/problems/k-sum-pairs-in-an-array/
 
@@ -26,6 +26,8 @@ Output: 4
 Explanation: There are four 1-sum pairs in the array, (1, 2), (2, 3), (3, 4)
 and (4, 5).
 
+Solution: two pointers
+Time complexity: O(n)
 """
 
 

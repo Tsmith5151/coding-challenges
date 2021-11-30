@@ -1,6 +1,7 @@
 """
 Find peak element
-https://leetcode.com/problems/find-peak-element/	
+
+Reference: https://leetcode.com/problems/find-peak-element/	
 
 
 A peak element is an element that is strictly greater than its neighbors.
@@ -20,6 +21,9 @@ Input: nums = [1,2,1,3,5,6,4]
 Output: 5
 Explanation: Your function can return either index number 1 where the peak
 element is 2, or index number 5 where the peak element is 6.
+
+Solution: Binary Search
+Time Complexity: O(log n)
 """
 
 
@@ -28,10 +32,23 @@ def findPeakElement(nums):
     :type nums: List[int]
     :rtype: int
     """
-    max_num = max(nums)
-    return nums.index(max_num)
+
+    left = 0
+    right = len(nums) - 1
+    while left < right:
+        # compute midpoint
+        mid = left + (right - left) // 2
+
+        # check if midpoint is peak
+        if mid - 1 >= 0 and nums[mid - 1] <= nums[mid]:
+            left = mid
+        else:
+            right = mid - 1
+
+    return nums[left + 1]
 
 
 if __name__ == "__main__":
-    nums = [1, 2, 1, 3, 5, 6, 4]
+    # nums = [1, 2, 1, 3, 5, 6, 4]
+    nums = [6, 5, 4, 3, 2, 3, 2]
     print(findPeakElement(nums))

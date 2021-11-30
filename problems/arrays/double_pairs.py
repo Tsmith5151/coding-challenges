@@ -13,8 +13,6 @@ Output: false
 Input: arr = [4,-2,2,-4]
 Output: true
 Explanation: We can take two groups, [-2,-4] and [2,4] to form [-2,-4,2,4] or [2,4,-2,-4]
-
-
 """
 import collections
 

@@ -17,6 +17,7 @@ Example 2:
 Input: nums = [0]
 Output: [0]
 
+
 Time complexity = O(n)
 """
 

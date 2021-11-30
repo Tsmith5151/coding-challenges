@@ -21,7 +21,7 @@ int count(int[] point) Counts the number of ways to form axis-aligned squares
 with point point = [x, y] as described above
 
 Solution: Using a hashmap to store the points and find diagonal points. 
-Time Complexity: O(1)
+Time Complexity: O(1) since we are using a hashmap. 
 """
 
 
