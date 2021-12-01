@@ -23,7 +23,8 @@ order of insertion following the weight and index priorities above.
 
 A server that is assigned task j at second t will be free again at second t + tasks[j].
 
-Build an array ans​​​​ of length m, where ans[j] is the index of the server the j​​​​​​th task will be assigned to.
+Build an array ans​​​​ of length m, where ans[j] is the index of the server the
+j​​​​​​th task will be assigned to. 
 
 Return the array ans​​​​.
 
@@ -39,7 +40,7 @@ Explanation: Events in chronological order go as follows:
   server 2 until second 7.
 
 Solution: Min Heap
-Time Complexity: O(mlogn); n = size of servers array
+Time Complexity: O(mlogn); n = size of servers array; m = number of tasks 
 Note: time complexity for a Heap of size n is O(logn). We are using a min heap
 here since each time we pop from the heap, we will have the minimum time
 remaining for the task the finish.  

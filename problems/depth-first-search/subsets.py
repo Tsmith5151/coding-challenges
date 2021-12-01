@@ -9,10 +9,8 @@ Given an integer array nums of unique elements, return all possible subsets
 The solution set must not contain duplicate subsets. Return the solution in any
 order. 
 
-```
 Input: nums = [1,2,3]
 Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
-```
 
 Solutions: DFS
 Time Complexity: O(n * 2^n)
@@ -21,8 +19,11 @@ Time Complexity: O(n * 2^n)
 from typing import List
 
 
-def subsets(nums: List[int]) -> List[List[int]]:
-    """Solution 2: Backtracking w/ DFS"""
+def subsets(nums):
+    """
+    :type nums: List[int]
+    :rtype: int
+    """
     results = []
     subset = []
 

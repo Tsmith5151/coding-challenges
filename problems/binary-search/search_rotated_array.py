@@ -26,7 +26,7 @@ Output: -1
 
 Solution: a brute force approach is to iterate through the array and find if
 the index of the array equals the target. But we need to write a solution is is
-O(log n) time complexity.
+O(log n) time complexity. 
 
 Solution: Binary Search 
 Reference: https://www.youtube.com/watch?v=U8XENwh8Oy8&t=18s

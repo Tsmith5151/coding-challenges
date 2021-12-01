@@ -28,5 +28,6 @@ def valid_string(string):
         return True
 
 
-string = "([{}])"
-valid_string(string)
+if __name__ == "__main__":
+    string = "([{}])"
+    print(valid_string(string))

@@ -1,9 +1,11 @@
 """ 
-3Sum
+Three Sum
 
 Reference: https://leetcode.com/problems/3sum/
 
-Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+Given an integer array nums, return all the triplets [nums[i], nums[j],
+nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k]
+== 0. 
 
 Notice that the solution set must not contain duplicate triplets.
 
@@ -20,7 +22,7 @@ Example 3:
 Input: nums = [0]
 Output: []
 
-Solution: pointers  
+Solution: Two pointers  
 Time complexity: O(nlogn) + O(n^2) = O(n^2)
 Space complexity: O(1) or O(n)
 

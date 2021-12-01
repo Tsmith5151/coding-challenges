@@ -4,6 +4,8 @@ Notes:
 - merge sort is a divide and conquer algorithm
 - recursive as the method calls itself
 - very efficient for large datasets
+
+Time Complexity: Sorts a list of integers using merge sort algorithm O(nlogn)
 """
 from typing import List
 
@@ -26,10 +28,10 @@ def merge(left: List[int], right: List[int]) -> List[int]:
     return result
 
 
-def merge_sort(arr: List[int]) -> List[int]:
+def merge_sort(arr):
     """
-    Sorts a list of integers using merge sort algorithm
-        O(n log n)
+    :type arr: List[int]
+    :rtype: int
     """
     if len(arr) <= 1:
         return arr

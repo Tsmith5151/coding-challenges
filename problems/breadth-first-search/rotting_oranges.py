@@ -36,14 +36,14 @@ def orangesRotting(grid):
     time = 0
     fresh = 0
 
-    def bfs(r, c):
+    def bfs(r, c, cur_fresh, cur_time):
         """Helper function for BFS"""
         queue = deque()
         visited.add((r, c))
         queue.append((r, c))
 
         dirs = [(0, 1), (0, -1), (1, 0), (-1, 0)]
-        while queue and fresh > 0:
+        while queue and cur_fresh > 0:
             row, col = queue.popleft()
             for dr, dc in dirs:
                 r, c = row + dr, col + dc
@@ -51,13 +51,13 @@ def orangesRotting(grid):
                     grid[r][c] = 2
                     queue.append((r, c))
                     visited.add((r, c))
-                    fresh -= 1  # decrement fresh oranges
-            time += 1
+                    cur_fresh -= cur_fresh  # decrement fresh oranges
+            cur_time = time + 1
 
     for r in range(rows):
         for c in range(cols):
             # if cell equals fresh orange, add to queue
-            if grid[r][c] == 1 and (r, c) not in visited:
+            if grid[r][c] == 1 and (r, c, time) not in visited:
                 fresh += 1
             if grid[r][c] == 2:
                 bfs(r, c)

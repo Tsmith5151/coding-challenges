@@ -9,6 +9,7 @@ Output: 3
 Explanation: There are three subarrays that meet the requirements: [2], [2, 1],
 [3].
 
+Reference: https://www.youtube.com/watch?v=qse5d1oPzxQ&t=274s
 """
 
 
@@ -18,8 +19,6 @@ def numSubarrayBoundedMax(nums, left, right):
     :type left: int
     :type right: int
     :rtype: int
-
-    Reference: https://www.youtube.com/watch?v=qse5d1oPzxQ&t=274s
     """
     # Keep track of two stacks: (low range, in bounds)
     # and last index pointer that's in bounds

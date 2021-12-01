@@ -20,7 +20,7 @@ def missingNumber(nums):
     :type nums: List[int]
     :rtype: int
 
-    Time complexity: O(2n)
+    Time complexity: O(n)
     """
     return sum(range(len(nums) + 1)) - sum(nums)
 

@@ -1,17 +1,15 @@
 """
-## Sort Array
-rr
-Link: https://leetcode.com/problems/sort-an-array/
+Sort Array
+
+Reference: https://leetcode.com/problems/sort-an-array/
         
 Given an array of integers nums, sort the array in ascending order.
 
 Example
-```
 Input: nums = [5,2,3,1]
 Output: [1,2,3,5]
-```
 
-### Explanation 
+Explanation 
 
 For this problem, we will implement, `Quicksort`. The performance will depend
 upon the position of the pivot with worse case O(n2) and best case being O(n
@@ -36,8 +34,8 @@ log n).
 - This is a recursive function and we can now call the quick sort algorithm on
   the left hand and right hand side of the list.  
 
-[Reference](https://www.youtube.com/watch?v=uXBnyYuwPe8)
-[Reference](https://www.youtube.com/watch?v=CB_NCoxzQnk)
+Reference 1: https://www.youtube.com/watch?v=uXBnyYuwPe8
+Reference 2: https://www.youtube.com/watch?v=CB_NCoxzQnk
 
 """
 from typing import List
@@ -88,6 +86,7 @@ class QuickSort:
         return border
 
 
-n = [5, 2, 3, 1]
-q = QuickSort().sort(n)
-print(q)
+if __name__ == "__main__":
+    n = [5, 2, 3, 1]
+    q = QuickSort().sort(n)
+    print(q)
