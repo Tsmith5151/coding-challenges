@@ -5,7 +5,8 @@ Reference: https://leetcode.com/problems/diameter-of-binary-tree/
 
 Given the root of a binary tree, return the length of the diameter of the tree.
 
-The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
+The diameter of a binary tree is the length of the longest path between any two
+nodes in a tree. This path may or may not pass through the root. 
 
 The length of a path between two nodes is represented by the number of edges
 between them.
@@ -24,8 +25,8 @@ Solution: Binary Tree; bottom-up traversal; this allows us to visit each node
 only once. We will also keep track of the height of the tree. We are finding
 the diameter of the bottom nodes and working up the top of the tree. For a node
 where either the right or left subtree is null, we will replace with -1. 
-Time Complexity: O(n)
 
+Time Complexity: O(n)
 If we do a top-down traversal, the time complexity is O(n^2).
 """
 
@@ -48,8 +49,6 @@ def diameterOfBinaryTree(root):
             return -1
         left = dfs(root.left)
         right = dfs(root.right)
-        print(left)
-        print(right)
         return root
 
     dfs(root)

@@ -51,7 +51,6 @@ def insert(intervals, newInterval):
             break
 
     # insert or merge our new interval
-    # insert:
     if not output or output[-1][1] < newInterval[0]:
         output.append(newInterval)
     else:

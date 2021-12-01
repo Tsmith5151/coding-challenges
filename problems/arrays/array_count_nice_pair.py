@@ -1,7 +1,7 @@
 """ 
-Count nice pairs in an array.
+Count nice pairs in an array
 
-Reference: 
+Reference: https://leetcode.com/problems/count-number-of-nice-pairs/
 
 You are given an array nums that consists of non-negative integers. Let us
 define rev(x) as the reverse of the non-negative integer x. For example,
@@ -31,6 +31,7 @@ Output: 4
 Time Complexity: O(N)
 Space Complexity: O(N)
 """
+
 import collections
 
 

@@ -1,15 +1,15 @@
 """
-Calculate the size of a binary tree (number of nodes in tree)
+Binary Tree: Calculate the size of a binary tree (number of nodes in tree)
 
-			1
+     		1
 		   / \
 		  2   3
 		/  \ 
-	   4   5
+	   4    5
 
 size = 5
 
-Solution: use a stack (last in/ first out) to keep track of all of the nodes visited thus var
+Solution: use a stack (last in/ first out) to keep track of all of the nodes visited thus far.
 """
 
 
@@ -34,7 +34,8 @@ class BinaryTree(object):
         # check left and right of node and increment counter
 
     def _size(self, cur_node):
-        """Recursive Solution
+        """
+        Recursive Solution
         Break tree down and compute size of the left and
         right subtrees, respectively.
         """

@@ -3,9 +3,7 @@ Pre-order, In-order, and Post-order Traversals:
 
 Reference: https://www.youtube.com/watch?v=6oL-0TdVy28
 
-- Example tree:
-
-```
+Example tree:
          _10_
         /     \
        7       11
@@ -13,7 +11,6 @@ Reference: https://www.youtube.com/watch?v=6oL-0TdVy28
     6    8       20
    /      \     /   \
    1      9    14   22
-```
     
 - Pre-order:  [10, 7, 6, 1, 8, 9, 11, 20, 14, 22] --> Root -> Left -> Right
 - In-order:   [1, 6, 7, 8, 9, 10, 11, 14, 20, 22] --> Left -> Root -> Right

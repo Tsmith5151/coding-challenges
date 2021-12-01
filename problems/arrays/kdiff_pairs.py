@@ -11,8 +11,6 @@ A k-sum pair is an integer pair (nums[i], nums[j]), where the following are true
 |nums[i] - nums[j]| == k
 Notice that |val| denotes the absolute value of val.
 
- 
-
 Example 1:
 
 Input: nums = [3,1,4,1,5], k = 2
@@ -37,7 +35,7 @@ def findPairs(nums, k):
     :type k: int
 
     Approach: using two pointers
-    Time complexity: O(n)
+    Time complexity: O(nlogn)
     """
     nums = list(set(nums))
     nums.sort()
@@ -48,10 +46,10 @@ def findPairs(nums, k):
     while left_pointer <= right_pointer:
         # compute sum of current left and right pointers
         curDiff = abs(nums[right_pointer] - nums[left_pointer])
-        # if diff is greater than target, move right pointer left
+        # if diff is less than target, move right pointer left
         if curDiff < k:
             right_pointer += 1
-        # if diff is less than target, move left pointer right
+        # if diff is greater than target, move left pointer right
         if curDiff > k:
             left_pointer += 1
         # if diff is equal to target, return results

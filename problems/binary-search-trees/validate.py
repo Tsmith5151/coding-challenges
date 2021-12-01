@@ -1,5 +1,7 @@
 """
-Binary Search Tree
+Binary Search Tree Validation
+
+Reference: https://www.leetcode.com/problems/validate-binary-search-tree/
 
 1.) Every node of the right subtree has to be larger than current node
 2.) Every node on the left subtree is small than the current node
