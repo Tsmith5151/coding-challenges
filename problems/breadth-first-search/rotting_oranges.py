@@ -47,7 +47,12 @@ def orangesRotting(grid):
             row, col = queue.popleft()
             for dr, dc in dirs:
                 r, c = row + dr, col + dc
-                if r in range(r) and c in range(r) and grid[r][c] != 1 and (r, c) not in visited:
+                if (
+                    r in range(r)
+                    and c in range(r)
+                    and grid[r][c] != 1
+                    and (r, c) not in visited
+                ):
                     grid[r][c] = 2
                     queue.append((r, c))
                     visited.add((r, c))
