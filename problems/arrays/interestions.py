@@ -9,20 +9,34 @@ Example 1:
 Input: nums1 = [1,2,2,1], nums2 = [2,2]
 Output: [2,2]
 
-
 Example 2:
 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [4,9]
 
 Note: Each element in the result should appear as many times as it shows in both arrays.
 The result can be in any order.
+
+
+Solution 1: Use a defaultdict
+Time Complexity: O(n*m)
+
+Solution 2: Use a counter 
+Time Complexity: O(n)
+
+Solution 3: Two pointers
+Time Complexity: O(n + m)
 """
 
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 
-def intersect(nums1, nums2):
-    """Alternative Method Using Defaultdict"""
+def intersection1(nums1, nums2):
+    """
+    :type nums1: List[int]
+    :type nums2: List[int]
+    :rtype: List[int]
+    """
+
     if not nums1 or not nums2:
         return []
 
@@ -40,21 +54,17 @@ def intersect(nums1, nums2):
     return [k for k, v in counter.items() if v > 1]
 
 
-nums1 = [4, 9, 5]
-nums2 = [9, 4, 9, 8, 4]
-
-intersect(nums1, nums2)
-
-from collections import Counter
-
-
-def intersect(nums1, nums2):
+def intersection2(nums1, nums2):
+    """
+    type nums1: List[int]
+    :type nums2: List[int]
+    :rtype: List[int]
+    """
     if not nums1 or not nums2:
         return []
 
     # save in a multiset the smallest
     counter = Counter(nums1)
-    print(counter)
 
     # find matches, removing from counter when found
     matches = []
@@ -65,42 +75,34 @@ def intersect(nums1, nums2):
     return matches
 
 
-nums1 = [4, 9, 5]
-nums2 = [9, 4, 9, 8, 4]
-
-intersect(nums1, nums2)
-"""
-Given two sorted arrays of integers - determine which elements interesect 
-"""
-
-from typing import List
-
-
-def intersection(numsA: List[int], numsB: List[int]):
+def intersection3(nums1, nums2):
     """
-    Check which elements intersect
-    Complexity = O(n) + m
+    :type nums1: List[int]
+    :type nums2: List[int]
+    :rtype: List[int]
     """
     intersect = []
-    i = 0  # pointers for numsA
-    j = 0  # pointer for numbB
-    while i < len(A) and j < len(B):
+    left1, left2 = 0, 0
+    while left1 < len(nums1) and left2 < len(nums2):
         # cases where interesect
-        if numsA[i] == numsB[j] or i == 0:  # add edge case at the end
-            if numsA[i] != numsA[i - 1]:
-                intersect.append(numsA[i])
-            i += 1
-            j += 1
+        if nums1[left1] == nums2[left2] or left1 == 0:  # add edge case at the end
+            if nums1[left1] != nums1[left1 - 1]:
+                intersect.append(nums1[left1])
+            left1 += 1
+            left2 += 1
 
-        # sorted arrays -> so move i up if less than j
-        elif numsA[i] < numsB[j]:
-            i += 1
+        # sorted arrays -> so move left1 up if less than left2
+        elif nums1[left1] < nums1[left2]:
+            left1 += 1
         else:
-            j += 1
+            left2 += 1
     return intersect
 
 
 if __name__ == "__main__":
-    A = [2, 3, 3, 5, 6, 11]
-    B = [3, 3, 7, 15, 31]
-    print(intersection(A, B))
+    nums1 = [2, 3, 3, 5, 6, 11]
+    nums2 = [3, 3, 7, 15, 31]
+
+    print(intersection1(nums1, nums2))
+    print(intersection2(nums1, nums2))
+    print(intersection3(nums1, nums2))
