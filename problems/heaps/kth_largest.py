@@ -11,7 +11,7 @@ Input: nums = [3,2,1,5,6,4], k = 2
 Output: 5
 
 Solution: Min Heap
-Time Complexity: O(logN)
+Time Complexity: O(logn)
 """
 
 import heapq

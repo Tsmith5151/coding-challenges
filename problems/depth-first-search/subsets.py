@@ -28,7 +28,7 @@ def subsets(nums):
     subset = []
 
     def dfs(i):
-
+        """Depth First Search Helper Function"""
         # base case
         if i >= len(nums):
             results.append(subset.copy())
