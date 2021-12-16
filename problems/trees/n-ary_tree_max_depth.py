@@ -14,7 +14,7 @@ Example:
 Input: root = [1,null,3,2,4,null,5,6]
 Output: 3
 
-Solution: Breath First Search
+Solution: Breadth First Search
 Time Complexity: O(n)
 """
 
@@ -34,7 +34,7 @@ def maxDepth(root):
     """
 
     def bfs(node):
-        """Breath First Search Helper Function"""
+        """Breadth First Search Helper Function"""
         if not node:
             return 0
 
